@@ -1,0 +1,1 @@
+__d(function(t,e,o,i){"use strict";var n=e(22),r=function(t){n(t&&"function"==typeof t.setNativeProps,"Touchable child must either be native or forward setNativeProps to a native component")};o.exports=r},349);

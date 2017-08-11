@@ -1,0 +1,1 @@
+__d(function(r,u,n,t){"use strict";function a(r,u){return s(null!=u,"accumulateInto(...): Accumulated items must not be null or undefined."),null==r?u:Array.isArray(r)?Array.isArray(u)?(r.push.apply(r,u),r):(r.push(u),r):Array.isArray(u)?[r].concat(u):[r,u]}var s=u(22);n.exports=a},159);

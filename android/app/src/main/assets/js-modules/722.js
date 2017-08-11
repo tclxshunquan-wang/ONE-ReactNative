@@ -1,0 +1,1 @@
+__d(function(t,n,e,i){"use strict";e.exports=function(t){return/^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(t)}},722);

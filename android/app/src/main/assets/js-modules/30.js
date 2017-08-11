@@ -1,0 +1,1 @@
+__d(function(n,r,e,t){"use strict";function u(n){var r=/[=:]/g,e={"=":"=0",":":"=2"},t=(""+n).replace(r,function(n){return e[n]});return"$"+t}function c(n){var r=/(=0|=2)/g,e={"=0":"=","=2":":"},t="."===n[0]&&"$"===n[1]?n.substring(2):n.substring(1);return(""+t).replace(r,function(n){return e[n]})}var s={escape:u,unescape:c};e.exports=s},30);

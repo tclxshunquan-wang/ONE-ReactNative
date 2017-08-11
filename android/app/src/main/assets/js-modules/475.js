@@ -1,0 +1,1 @@
+__d(function(i,t,n,e){var o=t(38),w=o.PixelRatio,d=o.Dimensions,g=w.get(),r=d.get("window").height,h=d.get("window").width,s=function(i){return 2===g?h<360?.95*i:r<667?i:r>=667&&r<=735?1.15*i:1.25*i:3===g?h<=360?i:r<667?1.15*i:r>=667&&r<=735?1.2*i:1.27*i:3.5===g?h<=360?i:r<667?1.2*i:r>=667&&r<=735?1.25*i:1.4*i:i};n.exports=s},475);

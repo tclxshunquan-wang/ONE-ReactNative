@@ -1,0 +1,1 @@
+__d(function(t,e,n,c){"use strict";var r={extractSingleTouch:function(t){var e=t.touches,n=t.changedTouches,c=e&&e.length>0,r=n&&n.length>0;return!c&&r?n[0]:c?e[0]:t}};n.exports=r},271);

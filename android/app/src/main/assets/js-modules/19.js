@@ -1,0 +1,1 @@
+__d(function(t,n,u,r){"use strict";function e(t){return function(){return t}}var s=function(){};s.thatReturns=e,s.thatReturnsFalse=e(!1),s.thatReturnsTrue=e(!0),s.thatReturnsNull=e(null),s.thatReturnsThis=function(){return this},s.thatReturnsArgument=function(t){return t},u.exports=s},19);

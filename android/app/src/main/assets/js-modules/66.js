@@ -1,0 +1,1 @@
+__d(function(r,o,e,n){"use strict";var s=function(){if(1===arguments.length&&arguments[0]instanceof Error){var r=arguments[0];console.error('Error: "'+r.message+'".  Stack:\n'+r.stack)}else console.error.apply(console,arguments)};e.exports=s},66);

@@ -1,0 +1,1 @@
+__d(function(e,t,l,a){Object.defineProperty(a,"__esModule",{value:!0}),a.default=void 0;var n=(t(38),function(){function e(t,l){babelHelpers.classCallCheck(this,e),this._value=t,this._token=t.addListener(l)}return babelHelpers.createClass(e,[{key:"remove",value:function(){this._value.removeListener(this._token)}}]),e}());a.default=n},425);

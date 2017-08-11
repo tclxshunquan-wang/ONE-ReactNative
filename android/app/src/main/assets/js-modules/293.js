@@ -1,0 +1,1 @@
+__d(function(r,e,n,s){"use strict";var t=e(208).PropTypes,u=e(226),o=u({x:t.number,y:t.number});n.exports=o},293);

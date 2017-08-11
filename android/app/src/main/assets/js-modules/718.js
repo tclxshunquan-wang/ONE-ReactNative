@@ -1,0 +1,1 @@
+__d(function(t,n,e,r){"use strict";function s(){this.handlers=[]}var h=n(703);s.prototype.use=function(t,n){return this.handlers.push({fulfilled:t,rejected:n}),this.handlers.length-1},s.prototype.eject=function(t){this.handlers[t]&&(this.handlers[t]=null)},s.prototype.forEach=function(t){h.forEach(this.handlers,function(n){null!==n&&t(n)})},e.exports=s},718);

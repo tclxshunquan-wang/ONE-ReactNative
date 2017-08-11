@@ -1,0 +1,1 @@
+__d(function(e,t,r,n){"use strict";var s=t(22),i=new Map,a="topsecret-",o={register:function(e){var t=e.uiViewClassName;s(!i.has(t),"Tried to register two views with the same name %s",t);var r=a+t;return i.set(r,e),r},get:function(e){var t=i.get(e);return s(t,"View config not found for name %s",e),t}};r.exports=o},176);

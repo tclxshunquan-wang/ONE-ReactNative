@@ -1,0 +1,1 @@
+__d(function(e,a,n,l){"use strict";var r=a(40).ImageEditingManager,t=function(){function e(){babelHelpers.classCallCheck(this,e)}return babelHelpers.createClass(e,null,[{key:"cropImage",value:function(e,a,n,l){r.cropImage(e,a,n,l)}}]),e}();n.exports=t},314);

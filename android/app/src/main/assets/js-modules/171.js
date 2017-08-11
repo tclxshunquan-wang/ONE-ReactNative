@@ -1,0 +1,1 @@
+__d(function(e,t,n,o){"use strict";var r=t(64),a={onChange:function(e,t,n){if(null!==t){var o="number"!=typeof t.tag?t._rootNodeID:t.stateNode._nativeTag;r.setJSResponder(o,n)}else r.clearJSResponder()}};n.exports=a},171);

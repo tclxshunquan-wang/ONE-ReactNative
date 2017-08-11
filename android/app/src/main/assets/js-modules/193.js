@@ -1,0 +1,1 @@
+__d(function(e,t,n,i){"use strict";var o=t(12),T=t(22),u={HOST:0,COMPOSITE:1,EMPTY:2,getType:function(e){return null===e||e===!1?u.EMPTY:o.isValidElement(e)?"function"==typeof e.type?u.COMPOSITE:u.HOST:void T(!1,"Unexpected node: %s",e)}};n.exports=u},193);
