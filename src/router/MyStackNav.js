@@ -26,6 +26,7 @@ import ScatterChartScreen from '../res/charts/ScatterChartScreen'
 import StackedBarChartScreen from '../res/charts/StackedBarChartScreen'
 import TimeSeriesLineChartScreen from '../res/charts/TimeSeriesLineChartScreen'
 import ZeroLineChartScreen from '../res/charts/ZeroLineChartScreen'
+import Shop_Info from '../redux/components/modules/Shop_Info'
 
 const RootReducer = StackNavigator(
     {
@@ -54,6 +55,7 @@ const RootReducer = StackNavigator(
         StackedBarChartScreen:{screen:StackedBarChartScreen},
         TimeSeriesLineChartScreen:{screen:TimeSeriesLineChartScreen},
         ZeroLineChartScreen:{screen:ZeroLineChartScreen},
+        Shop_Info:{screen:Shop_Info}
         // MyDrawerLayout:{screen:MyDrawerLayout}
     },
     {
