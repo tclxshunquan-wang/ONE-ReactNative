@@ -6,7 +6,8 @@ import {
     View,
     Image,
     ScrollView,
-    Text
+    Text,
+    TouchableOpacity
 } from 'react-native';
 import {Divider, Icon,Button} from 'react-native-elements'
 import ViewPager from 'react-native-viewpager'
@@ -99,60 +100,86 @@ class Shop_Info extends React.Component {
 
     render() {
         return (
-
-            <ScrollView
-                style={styles.itemContainer}
-                refreshControl={
+            <View style={styles.itemContainer}>
+                <ScrollView
+                    style={[styles.itemContainer,{paddingBottom:50}]}
+                    refreshControl={
                     <RefreshControl
                         refreshing={false}
                         colors={['#ff0000', '#00ff00', '#0000ff']}
                     />
                 }>
-                <View style={styles.itemContainer}>
-                    <View style={{height:300}}>
-                        <ViewPager
-                            style={{flex:1}}
-                            isLoop={true}
-                            autoPlay={true}
-                            dataSource={this.state.dataSource}
-                            renderPage={this._renderPage}
-                        />
-                    </View>
-                    <View style={{padding:10}}>
-                        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                            <View style={{flexDirection:'row',alignItems:'flex-end'}}>
-                                <Text style={{fontSize:16,color:'#f44336'}}>¥9.6</Text>
-                                <Text style={{fontSize:10,color:'#888586',marginBottom:3,marginLeft:3}}>已拼8.2万件</Text>
-                            </View>
-                            <Text style={{fontSize:10,color:'#888586',marginTop:5}}>已团823121件 . 2人团</Text>
+                    <View style={styles.itemContainer}>
+                        <View style={{height:300}}>
+                            <ViewPager
+                                style={{flex:1}}
+                                isLoop={false}
+                                autoPlay={false}
+                                dataSource={this.state.dataSource}
+                                renderPage={this._renderPage}
+                            />
                         </View>
-                        <Text style={{fontSize:16,marginTop:5}}>    宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</Text>
-                        <Text style={{fontSize:12,color:'#888586',marginBottom:3,marginLeft:3,marginTop:5}}>    中粮我买网所售商品均经严格的供应商资质审查、商品审查、入库全检、出货全检流程。由于部分商品包装可能会更换，我买网所示商品图片仅作为参考，关于商品的更详尽信息如包装、产地、生产日期等，以收到商品实物为准</Text>
-                    </View>
-                    <Divider style={{height:5}}/>
-                    <View style={{paddingLeft:10,paddingRight:10}}>
-                        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',height:30}}>
-                            <Text style={{fontSize:12}}>123人在开团</Text>
-                            <View style={{flexDirection:'row',alignItems:'center'}}>
-                                <Text style={{fontSize:12,color:'#888586'}}>查看更多</Text>
-                                <Icon
-                                    name='chevron-right'
-                                    color='#888586'
-                                />
+                        <View style={{padding:10}}>
+                            <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                                <View style={{flexDirection:'row',alignItems:'flex-end'}}>
+                                    <Text style={{fontSize:16,color:'#f44336'}}>¥9.6</Text>
+                                    <Text style={{fontSize:10,color:'#888586',marginBottom:3,marginLeft:3}}>已拼8.2万件</Text>
+                                </View>
+                                <Text style={{fontSize:10,color:'#888586',marginTop:5}}>已团823121件 . 2人团</Text>
                             </View>
+                            <Text style={{fontSize:16,marginTop:5}}>    宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</Text>
+                            <Text style={{fontSize:12,color:'#888586',marginBottom:3,marginLeft:3,marginTop:5}}>    中粮我买网所售商品均经严格的供应商资质审查、商品审查、入库全检、出货全检流程。由于部分商品包装可能会更换，我买网所示商品图片仅作为参考，关于商品的更详尽信息如包装、产地、生产日期等，以收到商品实物为准</Text>
                         </View>
-                        <Divider style={{height:1}}/>
-                        {this.timeView()}
-                        <Divider style={{height:1}}/>
-                        {this.timeView()}
+                        <Divider style={{height:5}}/>
+                        <View style={{paddingLeft:10,paddingRight:10}}>
+                            <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',height:30}}>
+                                <Text style={{fontSize:12}}>123人在开团</Text>
+                                <View style={{flexDirection:'row',alignItems:'center'}}>
+                                    <Text style={{fontSize:12,color:'#888586'}}>查看更多</Text>
+                                    <Icon
+                                        name='chevron-right'
+                                        color='#888586'
+                                    />
+                                </View>
+                            </View>
+                            <Divider style={{height:1}}/>
+                            {this.timeView()}
+                            <Divider style={{height:1}}/>
+                            {this.timeView()}
+                        </View>
+                        <Divider style={{height:5}}/>
+                        <Image
+                            style={{width:width,flex:1}}
+                            resizeMode="stretch"
+                            source={require('../../../../images/img-info.png')}/>
                     </View>
-                    <Divider style={{height:5}}/>
-                    <Image
-                        style={{width:width,flex:1}}
-                        resizeMode="stretch"
-                        source={require('../../../../images/img-info.png')}/>
+                </ScrollView>
+                <View style={{height:50,position:'absolute',bottom:0,width:width,flexDirection:'row',backgroundColor:'#fff',}}>
+                    {
+                        [1,2,3].map((item,i)=>{
+                            return (
+                                <View
+                                    key={i}
+                                    style={{height:50,width:50,alignItems:'center',justifyContent:'center',borderRightWidth:1,borderRightColor:'#e6e6e6'}}>
+                                    <Image
+                                        source={require('../../../../images/icon_report02@2x.png')}/>
+                                    <Text style={{fontSize:10,color:'#888586',marginTop:3}}>首页</Text>
+                                </View>
+                            )
+                        })
+                    }
+                    <View style={{height:50,flex:1,backgroundColor:'#888586',justifyContent:'center',alignItems:'center'}}>
+                        <TouchableOpacity>
+                            <Text  style={{color:'#fff',fontSize:14}}>加入购物车</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{height:50,flex:1,backgroundColor:'#f44336',justifyContent:'center',alignItems:'center'}}>
+                       <TouchableOpacity>
+                           <Text  style={{color:'#fff',fontSize:14}}>立即购买</Text>
+                       </TouchableOpacity>
+                    </View>
                 </View>
-            </ScrollView>
+            </View>
 
         );
     }
