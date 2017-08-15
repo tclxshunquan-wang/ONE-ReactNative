@@ -20,7 +20,6 @@ const dataSource = new ViewPager.DataSource({
     pageHasChanged: (p1, p2) => p1 !== p2,
 });
 const {width, height} = Dimensions.get('window');
-const codeTime = 60;
 class Shop_Info extends React.Component {
     static navigationOptions = ({navigation}) => {
         return {

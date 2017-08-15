@@ -1,24 +1,13 @@
-import React from 'react';
-import {
-    Animated,
-    Dimensions,
-    StyleSheet,
-    View,
-    Text,
-    Image,
-    ScrollView,
-    TouchableOpacity
-} from 'react-native';
-import {Divider, ListItem} from 'react-native-elements'
-import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view'
-import Tb1 from './modules/Shop_Tab1'
-
-const {width, height} = Dimensions.get('window');
+import React from "react";
+import {View} from "react-native";
+import ScrollableTabView, {ScrollableTabBar} from "react-native-scrollable-tab-view";
+import Tb1 from "./modules/Shop_Tab1";
+import Tb2 from "./modules/Shop_Tab2";
+import data from "../../res/CircleTabData";
 class ShopScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-        }
+        this.state = {};
     }
 
 
@@ -35,33 +24,34 @@ class ShopScreen extends React.Component {
                     tabBarBackgroundColor="#fff"//设置整个Tab这一栏的背景颜色
                     renderTabBar={() => <ScrollableTabBar />}
                 >
-                    <Tb1 tabLabel="首页" {...this.props}/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-                    <Tb1 tabLabel="首页"/>
-
+                    <Tb1 tabLabel="首页"
+                         circleTabList1={data.tab1.list1}
+                         circleTabList2={data.tab1.list2}
+                         {...this.props}/>
+                    <Tb2 tabLabel="服饰"
+                         circleTabList1={data.tab2.list1}
+                         circleTabList2={data.tab2.list2}
+                         {...this.props}/>
+                    <Tb2 tabLabel="男装"
+                         circleTabList1={data.tab3.list1}
+                         circleTabList2={data.tab3.list2}
+                         {...this.props}/>
+                    <Tb2 tabLabel="母婴"
+                         circleTabList1={data.tab4.list1}
+                         circleTabList2={data.tab4.list2}
+                         {...this.props}/>
+                    <Tb2 tabLabel="家具"
+                         circleTabList1={data.tab5.list1}
+                         circleTabList2={data.tab5.list2}
+                         {...this.props}/>
+                    <Tb2 tabLabel="美食"
+                         circleTabList1={data.tab6.list1}
+                         circleTabList2={data.tab6.list2}
+                         {...this.props}/>
                 </ScrollableTabView>
             </View>
         );
     }
 }
 
-const styles = StyleSheet.create({
-    itemContainer: {
-        backgroundColor: '#fff',
-        flex: 1
-    },
-    card: {
-        marginBottom: 5
-    },
-    page: {
-        flex: 1
-    },
-
-});
 export default ShopScreen
