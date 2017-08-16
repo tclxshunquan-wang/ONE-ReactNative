@@ -1,1 +1,0 @@
-__d(function(e,t,o,n){var r=t(38),a=r.StyleSheet,l={position:"absolute",top:0,left:0,bottom:0,right:0};o.exports=a.create({container:babelHelpers.extends({},l,{justifyContent:"center"}),menu:babelHelpers.extends({},l),frontView:{flex:1,position:"absolute",left:0,top:0,backgroundColor:"transparent"},overlay:babelHelpers.extends({},l,{backgroundColor:"transparent"})})},696);

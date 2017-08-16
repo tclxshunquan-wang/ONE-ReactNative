@@ -1,1 +1,0 @@
-__d(function(n,r,t,e){function i(n){var r=0,t=0;return function(){var e=a(),i=u-(e-t);if(t=e,i>0){if(++r>=o)return arguments[0]}else r=0;return n.apply(void 0,arguments)}}var o=800,u=16,a=Date.now;t.exports=i},609);

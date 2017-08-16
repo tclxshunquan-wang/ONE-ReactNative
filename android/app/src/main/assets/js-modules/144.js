@@ -1,1 +1,0 @@
-__d(function(e,s,t,c){"use strict";s(145),t.exports={fetch:fetch,Headers:Headers,Request:Request,Response:Response}},144);

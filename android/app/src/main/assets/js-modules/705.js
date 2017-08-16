@@ -1,1 +1,0 @@
-__d(function(n,t,o,r){function u(n){return!!n.constructor&&"function"==typeof n.constructor.isBuffer&&n.constructor.isBuffer(n)}function f(n){return"function"==typeof n.readFloatLE&&"function"==typeof n.slice&&u(n.slice(0,0))}o.exports=function(n){return null!=n&&(u(n)||f(n)||!!n._isBuffer)}},705);

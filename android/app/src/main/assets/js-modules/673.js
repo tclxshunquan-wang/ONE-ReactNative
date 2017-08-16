@@ -1,1 +1,0 @@
-__d(function(e,t,u,a){Object.defineProperty(a,"__esModule",{value:!0});var l=t(12),n=babelHelpers.interopRequireDefault(l),r=t(38),d=function(){return n.default.createElement(r.View,{style:i.dummyNavBtn})},i=r.StyleSheet.create({dummyNavBtn:{height:24,width:24}});a.default=d},673);

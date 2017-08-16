@@ -1,1 +1,0 @@
-__d(function(e,u,t,d){"use strict";function f(e){return e&&e.__esModule?e:{default:e}}d.__esModule=!0;var i=u(377),s=f(i);d.default=s.default.shape({subscribe:s.default.func.isRequired,dispatch:s.default.func.isRequired,getState:s.default.func.isRequired})},380);

@@ -1,1 +1,0 @@
-__d(function(n,r,t,e){"use strict";t.exports=function(n,r){return function(){for(var t=new Array(arguments.length),e=0;e<t.length;e++)t[e]=arguments[e];return n.apply(r,t)}}},704);
