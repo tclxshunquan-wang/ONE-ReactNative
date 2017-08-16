@@ -1,9 +1,6 @@
 package com.simpleapp;
 
 import android.app.Activity;
-import android.app.LoaderManager;
-import android.content.Loader;
-import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
@@ -11,8 +8,6 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactInstanceManagerBuilder;
-import com.facebook.react.ReactNativeHost;
-import com.facebook.react.ReactRootView;
 import com.facebook.react.cxxbridge.JSBundleLoader;
 
 import javax.annotation.Nullable;

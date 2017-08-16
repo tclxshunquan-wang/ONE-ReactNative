@@ -28,7 +28,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new MPAndroidChartPackage(),
             new BarcodeScannerPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new com.simpleapp.MainReactPackage()
       );
     }
   };

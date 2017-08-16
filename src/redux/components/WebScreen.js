@@ -11,7 +11,6 @@ class WebScreen extends React.Component {
         return {
             title:navigation.state.params.title,
         }
-
     };
 
 
@@ -20,6 +19,7 @@ class WebScreen extends React.Component {
         this.state={
             url:''
         }
+        console.disableYellowBox = true;
     }
 
     componentDidMount(){
@@ -41,8 +41,6 @@ class WebScreen extends React.Component {
                     javaScriptEnabled={true}
                     domStorageEnabled={true}
                     decelerationRate="normal"
-                    onNavigationStateChange={this.onNavigationStateChange}
-                    onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
                     startInLoadingState={true}
                     renderLoading={()=>{
                         return(
