@@ -1,4 +1,5 @@
 # ONE-ReactNative
+<img width="128" height="128" src="https://github.com/kenvies/ONE-ReactNative/blob/master/dis/logo.png"/>
 
 ## Download
 [Android APK](https://fir.im/onern)
@@ -20,15 +21,15 @@
 ### Step One
 
 ```
-npm install -g react-native-cli
+git clone https://github.com/kenvies/ONE-ReactNative.git
 ```
 ### Step Two
 
 ```
-npm install
+cd ONE-ReactNative && npm install
 ```
 ### Step Three
 
 ```
-react-native start
+react-native run-ios/run-adnroid(建议用xcode或者android studio去编译你的原生项目)
 ```
