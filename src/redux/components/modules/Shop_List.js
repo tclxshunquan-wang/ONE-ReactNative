@@ -10,9 +10,6 @@ import {
     Dimensions
 } from "react-native";
 import {CheckBox, Button, Divider, Icon} from 'react-native-elements'
-import {bindActionCreators} from 'redux';
-import * as commentAction from '../../actions/CommentAction';
-import {connect} from 'react-redux';
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 const VIEWABILITY_CONFIG = {
     minimumViewTime: 1000,
@@ -134,12 +131,5 @@ const styles = StyleSheet.create({
     }
 
 });
-export default connect(state => ({
-        ...state,//配置全局store 中所有的state
-        state: state.homeReducer
-    }),
-    (dispatch) => ({
-        actions: bindActionCreators(commentAction, dispatch)
-    })
-)(Shop_List);
+export default Shop_List;
 

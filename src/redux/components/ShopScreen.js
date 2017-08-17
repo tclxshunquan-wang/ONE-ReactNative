@@ -4,10 +4,9 @@ import ScrollableTabView, {ScrollableTabBar} from "react-native-scrollable-tab-v
 import Tb1 from "./modules/Shop_Tab1";
 import Tb2 from "./modules/Shop_Tab2";
 import data from "../../res/CircleTabData";
-class ShopScreen extends React.Component {
+class ShopScreen extends React.PureComponent {
     constructor(props) {
         super(props);
-        this.state = {};
     }
 
 

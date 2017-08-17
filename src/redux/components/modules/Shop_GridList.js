@@ -8,9 +8,6 @@ import {
     TouchableOpacity,
     Dimensions
 } from "react-native";
-import {bindActionCreators} from 'redux';
-import * as commentAction from '../../actions/CommentAction';
-import {connect} from 'react-redux';
 import data from "../../../res/CircleTabData";
 const {width, height} = Dimensions.get('window');
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -101,12 +98,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#e5e5e5'
     },
 });
-export default connect(state => ({
-        ...state,//配置全局store 中所有的state
-        state: state.homeReducer
-    }),
-    (dispatch) => ({
-        actions: bindActionCreators(commentAction, dispatch)
-    })
-)(Shop_GridList);
+export default Shop_GridList;
 

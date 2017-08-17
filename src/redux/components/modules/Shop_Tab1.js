@@ -69,6 +69,7 @@ class Shop_Tab1 extends React.PureComponent {
     render() {
         return (
             <ScrollView
+                style={{flex:1,backgroundColor:'#444'}}
                 tabLabel={this.props.tabLabel}
                 refreshControl={
                     <RefreshControl

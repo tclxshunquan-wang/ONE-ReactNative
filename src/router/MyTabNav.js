@@ -64,11 +64,12 @@ export default  TabNavigator({
         }
     }
   }, {
-      animationEnabled: true, // 切换页面时是否有动画效果
+      animationEnabled: false, // 切换页面时是否有动画效果
       tabBarPosition: 'bottom', // 显示在底端，android 默认是显示在页面顶端的
       swipeEnabled: false, // 是否可以左右滑动切换tab
       backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
       tabBarOptions: {
+          scrollEnabled:false,//是否启用可滚动选项卡。android
           upperCaseLabel:false,
           activeTintColor: '#2196f3', // 文字和图片选中颜色
           inactiveTintColor: '#999', // 文字和图片未选中颜色
