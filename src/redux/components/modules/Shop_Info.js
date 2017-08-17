@@ -24,6 +24,16 @@ class Shop_Info extends React.Component {
     static navigationOptions = ({navigation}) => {
         return {
             title: navigation.state.params.title,
+            headerRight: (
+                <TouchableOpacity
+                onPress={()=>navigation.navigate('Shop_Car')}
+                >
+                    <Image
+                        style={{width:25,height:25,marginRight:15}}
+                        resizeMode="stretch"
+                        source={require('../../../../images/shop_up.png')}/>
+                </TouchableOpacity>
+            ),
         }
 
     };
@@ -37,7 +47,8 @@ class Shop_Info extends React.Component {
         this.state = {
             dataSource: dataSource.cloneWithPages(IMGS),
             height: 500,
-            data: 1818235982
+            data: 1818235982,
+            _tintColor:true
         };
         this._index = 1818235982;
         this._timer = null;
@@ -164,17 +175,18 @@ class Shop_Info extends React.Component {
                 <View
                     style={{height:50,position:'absolute',bottom:0,width:width,flexDirection:'row',backgroundColor:'#fff',}}>
                     {
-                        [{name: '首页', img: require('../../../../images/home_up.png')},
-                            {name: '喜欢', img: require('../../../../images/icon-like.png')},
-                            {name: '客服', img: require('../../../../images/icon-notice.png')}].map((item, i) => {
+                        [{name: '首页', img: require('../../../../images/home_up.png'),event: ()=>this.props.navigation.goBack()},
+                            {name: '喜欢', img: require('../../../../images/icon-like.png'),event: ()=>{this.setState({_tintColor:!this.state._tintColor})}},
+                            {name: '客服', img: require('../../../../images/icon-notice.png'),event: ()=>{}}].map((item, i) => {
                             return (
                                 <TouchableOpacity
                                     key={i}
+                                    onPress={item.event}
                                 >
                                     <View
                                         style={{height:50,width:50,alignItems:'center',justifyContent:'center',borderRightWidth:1,borderRightColor:'#e6e6e6'}}>
                                         <Image
-                                            style={{width:25,height:25}}
+                                            style={{width:25,height:25,tintColor:i==1?!this.state._tintColor?'red':"#e6e6e6":'#e6e6e6'}}
                                             source={item.img}/>
                                         <Text style={{fontSize:10,color:'#888586',marginTop:3}}>{item.name}</Text>
                                     </View>
@@ -184,7 +196,9 @@ class Shop_Info extends React.Component {
                     }
                     <View
                         style={{height:50,flex:1,backgroundColor:'#888586',justifyContent:'center',alignItems:'center'}}>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                        onPress={()=>{}}
+                        >
                             <Text style={{color:'#fff',fontSize:14}}>加入购物车</Text>
                         </TouchableOpacity>
                     </View>
