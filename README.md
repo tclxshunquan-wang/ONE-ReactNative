@@ -21,15 +21,15 @@
 ### Step One
 
 ```
-npm install -g react-native-cli
+git clone https://github.com/kenvies/ONE-ReactNative.git
 ```
 ### Step Two
 
 ```
-npm install
+cd ONE-ReactNative && npm install
 ```
 ### Step Three
 
 ```
-react-native start
+react-native run-ios/run-adnroid
 ```
