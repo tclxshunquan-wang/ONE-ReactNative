@@ -1,4 +1,5 @@
 # ONE-ReactNative
+<img width="128" height="128" src="https://github.com/kenvies/ONE-ReactNative/blob/master/dis/logo.png"/>
 
 ## Download
 [Android APK](https://fir.im/onern)
