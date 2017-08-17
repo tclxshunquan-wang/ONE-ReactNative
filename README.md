@@ -31,5 +31,5 @@ cd ONE-ReactNative && npm install
 ### Step Three
 
 ```
-react-native run-ios/run-adnroid
+react-native run-ios/run-adnroid(建议用xcode或者android studio去编译你的原生项目)
 ```
