@@ -7,7 +7,7 @@ import {
     Text,
     TouchableOpacity,
     Platform,
-    BackHandler
+    AlertIOS
 } from 'react-native';
 import {CheckBox, Button, Card, Icon} from 'react-native-elements'
 import {bindActionCreators} from 'redux';
@@ -43,7 +43,13 @@ class MyHomeScreen extends React.Component {
                     navigation.navigate('ReduxScreen', {title: item.name});
                     break;
                 case 2://二维码扫描
-                    navigation.navigate('QCodeScreen', {title: item.name});
+                    if(Platform.OS==='ios'){
+                        AlertIOS.alert(
+                            '正在开发...',
+                        )
+                    }else{
+                        navigation.navigate('QCodeScreen', {title: item.name});
+                    }
                     break;
                 case 3://数据缓存
                     navigation.navigate('StorageScreen', {title: item.name});
@@ -65,6 +71,7 @@ class MyHomeScreen extends React.Component {
                     break;
                 case 8://图表
                     navigation.navigate('ChartScreen', {title: item.name});
+                    break;
                 case 10://视频
                     navigation.navigate('VideoScreen', {title: item.name});
                     break;
