@@ -22,8 +22,18 @@ let ios = [
     },
     {title: 'ReactNative打离线包-ios篇', url: 'https://segmentfault.com/a/1190000004189538'},
 ];
+/**
+ *@fileName:PackageScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:47
+ *@disc:打包教程
+ **/
 class PackageScreen extends React.Component {
-
+    static navigationOptions=({navigation})=>{
+        return {
+            title:navigation.state.params.title,
+        }
+    };
     render() {
         return (
             <ScrollView>

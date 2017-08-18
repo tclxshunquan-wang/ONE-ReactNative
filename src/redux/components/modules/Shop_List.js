@@ -18,6 +18,12 @@ const VIEWABILITY_CONFIG = {
 };
 import data from "../../../res/CircleTabData";
 const {width, height} = Dimensions.get('window');
+/**
+ *@fileName:Shop_List.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:43
+ *@disc:商品列表
+ **/
 class Shop_List extends React.PureComponent {
     _keyExtractor = (item, index) => `${item.id}_${index}`;
 

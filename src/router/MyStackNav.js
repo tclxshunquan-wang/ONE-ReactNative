@@ -101,15 +101,3 @@ const RootReducer = StackNavigator(
 
 export default RootReducer;
 
-//侧边栏 三者嵌套关系：侧边栏->跳转->选项卡 （DrawerNavigator->StackNavigator->TabNavigator）
-// export default DrawerNavigator({
-//        nav: { screen: nav },
-//        MyDrawerLayout:{screen:MyDrawerLayout}
-//    }, {
-//        drawerWidth: windowWidth*4 / 5, // 抽屉宽
-//        drawerPosition: 'left', // 抽屉在左边还是右边
-//        contentComponent: (props)=>{return <MyDrawerLayout {...props}/>},  // 自定义抽屉组件
-//        contentOptions: {
-//          initialRouteName: nav, // 默认页面组件
-//        }
-//    });

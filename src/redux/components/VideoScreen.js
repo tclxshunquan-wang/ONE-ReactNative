@@ -12,7 +12,12 @@ import {
 } from 'react-native';
 
 import Video from 'react-native-video';
-
+/**
+ *@fileName:VideoScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:48
+ *@disc:视频
+ **/
 export  default  class VideoScreen extends Component {
     static navigationOptions=({navigation})=>{
         return {

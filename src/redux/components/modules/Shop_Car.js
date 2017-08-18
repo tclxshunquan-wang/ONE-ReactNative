@@ -21,6 +21,12 @@ const VIEWABILITY_CONFIG = {
 };
 import data from "../../../res/CircleTabData";
 const {width, height} = Dimensions.get('window');
+/**
+ *@fileName:Shop_Car.js
+ *@author:shunq_wang
+ *@date:2017/8/18
+ *@disc:购物车
+ **/
 class Shop_Car extends React.PureComponent {
 
     static navigationOptions=({navigation})=>{

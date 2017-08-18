@@ -1,11 +1,17 @@
-import React from 'react';
 
+import React from 'react';
 import BarcodeScanner from 'react-native-barcodescanner';
 import {bindActionCreators} from 'redux';
 import * as homeAction from '../actions/HomeAction';
 import {connect} from 'react-redux';
 
 let tip=true;
+/**
+ *@fileName:QCodeScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18
+ *@disc:二维码扫描
+ **/
 class QCodeScreen extends React.Component {
 
     static navigationOptions = ({navigation}) => {
@@ -37,7 +43,7 @@ class QCodeScreen extends React.Component {
     render() {
         return (
             <BarcodeScanner
-                onBarCodeRead={(e)=>this.barcodeReceived(e)}
+                onBarCodeRead={(e)=>this.barcodeReceived(e)}//扫描结果回掉
                 style={{ flex: 1 }}
                 torchMode={this.state.torchMode}
                 cameraType={this.state.cameraType}

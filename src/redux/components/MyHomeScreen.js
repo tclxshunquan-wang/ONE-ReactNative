@@ -9,7 +9,7 @@ import {
     Platform,
     AlertIOS
 } from 'react-native';
-import {CheckBox, Button, Card, Icon} from 'react-native-elements'
+import {Card, Icon} from 'react-native-elements'
 import {bindActionCreators} from 'redux';
 import * as homeAction from '../actions/HomeAction';
 import * as commentAction from '../actions/CommentAction';
@@ -20,6 +20,12 @@ const VIEWABILITY_CONFIG = {
     viewAreaCoveragePercentThreshold: 100,
     waitForInteraction: true,
 };
+/**
+ *@fileName:MyHomeScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:47
+ *@disc:首页
+ **/
 class MyHomeScreen extends React.Component {
     _keyExtractor = (item, index) => `${item.id}_${index}`;
 

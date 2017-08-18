@@ -4,7 +4,7 @@ import {
     Text,
     StyleSheet,
     View,
-    NativeModules,
+    ScrollView,
     TouchableOpacity
 } from 'react-native';
 import {CheckBox, Button, Card, Divider} from 'react-native-elements'
@@ -26,39 +26,48 @@ const URL = [
     }
 ];
 
-let str = '        作为一个练手项目，ONE-ReactNative包含了很多我们常用的功能，例如网络请求、Redux、图表等。另外值得大家学习的是该项目包含了一个较为完整的商城模块。作者作为一个苦逼的程序猿，希望用一种简单明了的手段让学习React Native的小伙伴尽快入门。\n'+
-          "        同时我也希望志同道合的伙伴联合在一起，相互分享，相互探讨(QQ群:581621024)";
+let str = '        作为一个练手项目，ONE-ReactNative包含了很多我们常用的功能，例如网络请求、Redux、图表等。另外值得大家学习的是该项目包含了一个较为完整的商城模块。作者作为一个苦逼的程序猿，希望用一种简单明了的手段让学习React Native的小伙伴尽快入门。\n' +
+    "        同时我也希望志同道合的伙伴联合在一起，相互分享，相互探讨(QQ群:581621024)";
 let i = 0;
+/**
+ *@fileName:AboutMeScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:46
+ *@disc:个人中心
+ **/
 class AboutMeScreen extends React.Component {
 
     constructor(props) {
         super(props);
         this.circleBut = this.circleBut.bind(this);
-        this.typing=this.typing.bind(this);
-        this.state={
-            info:""
+        this.typing = this.typing.bind(this);
+        this.state = {
+            info: ""
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.typing()
     }
+
     componentWillUnmount() {
         this.timer && clearTimeout(this.timer);
     }
 
-    typing=()=>{
+    typing = () => {//js逐个打印
         if (i <= str.length) {
             this.setState({
-                info:str.slice(0, i++) + '_'
+                info: str.slice(0, i++) + '_'
             });
             this.timer = setTimeout(
-                () => {this.typing()},
+                () => {
+                    this.typing()
+                },
                 200
             );
-        }else{
+        } else {
             this.setState({
-                info:str
+                info: str
             });
             this.timer && clearTimeout(this.timer);
         }
@@ -66,14 +75,16 @@ class AboutMeScreen extends React.Component {
 
     render() {
         return (
-                <View style={{alignItems: 'center',paddingTop:15,paddingBottom:15}}>
+            <ScrollView>
+
+                <View style={{alignItems: 'center', paddingTop: 15, paddingBottom: 15}}>
                     <Image style={{width: 50, height: 50, borderRadius: 25}}
                            source={require("../../../images/icon-head.jpeg")}/>
                     <Text style={{marginTop: 10, fontSize: 16}}>Quan</Text>
                     <Card
                         containerStyle={styles.itemContainer}
                     >
-                        <Text style={{ fontSize: 12,color:'#888586',lineHeight:20}}>{this.state.info}</Text>
+                        <Text style={{fontSize: 12, color: '#888586', lineHeight: 20}}>{this.state.info}</Text>
                     </Card>
 
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', minWidth: 240, marginTop: 20}}>
@@ -90,9 +101,8 @@ class AboutMeScreen extends React.Component {
                             title: URL[2].title
                         }))}
                     </View>
-
                 </View>
-
+            </ScrollView>
         );
     }
 
@@ -114,7 +124,7 @@ const styles = StyleSheet.create({
     itemContainer: {
         backgroundColor: '#fff',
         marginTop: 10,
-        maxHeight:300,
+        maxHeight: 300,
     },
     card: {
         marginBottom: 5,

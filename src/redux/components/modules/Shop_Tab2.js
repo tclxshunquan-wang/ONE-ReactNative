@@ -9,6 +9,12 @@ import {
     TouchableOpacity
 } from 'react-native';
 import Shop_GridList  from  './Shop_GridList'
+/**
+ *@fileName:Shop_Tab2.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:44
+ *@disc:商品分类2
+ **/
 class Shop_Tab2 extends React.PureComponent {
     constructor(props) {
         super(props);

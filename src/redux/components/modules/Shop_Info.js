@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
     RefreshControl,
@@ -20,6 +21,12 @@ const dataSource = new ViewPager.DataSource({
     pageHasChanged: (p1, p2) => p1 !== p2,
 });
 const {width, height} = Dimensions.get('window');
+/**
+ *@fileName:Shop_Info.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:43
+ *@disc:商品详情
+ **/
 class Shop_Info extends React.Component {
     static navigationOptions = ({navigation}) => {
         return {

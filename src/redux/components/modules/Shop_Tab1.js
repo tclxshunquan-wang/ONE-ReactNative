@@ -21,6 +21,12 @@ const dataSource = new ViewPager.DataSource({
     pageHasChanged: (p1, p2) => p1 !== p2,
 });
 const {width, height} = Dimensions.get('window');
+/**
+ *@fileName:Shop_Tab1.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:43
+ *@disc:商品分类1
+ **/
 class Shop_Tab1 extends React.PureComponent {
     constructor(props) {
         super(props);

@@ -19,6 +19,12 @@ let urls=[
     {title:'React-Navigation与Redux整合详解',url:'http://www.lcode.org/react-navigation-redux/'},
     {title:'说一说 React 和 Redux 你知道或者不知道的一些事情',url:'https://juejin.im/post/590fb6fea0bb9f00589d7667'},
 ];
+/**
+ *@fileName:ReduxScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:47
+ *@disc:Redux教程
+ **/
 class ReduxScreen extends React.Component {
 
     static navigationOptions=({navigation})=>{

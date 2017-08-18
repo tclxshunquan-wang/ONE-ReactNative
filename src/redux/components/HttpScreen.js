@@ -8,6 +8,12 @@ import {
 import {ListItem, Button, Card, List} from 'react-native-elements'
 import {send} from '../../http/AxiosRequest'
 import  {fetch_} from '../../http/FetchRequest'
+/**
+ *@fileName:HttpScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:46
+ *@disc:网络请求
+ **/
 class HttpScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
         return {

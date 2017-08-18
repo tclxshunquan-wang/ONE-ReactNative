@@ -11,6 +11,13 @@ import {
 import data from "../../../res/CircleTabData";
 const {width, height} = Dimensions.get('window');
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+/**
+ *@fileName:Shop_GridList.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:42
+ *@disc: 商品列表
+ **/
+
 class Shop_GridList extends React.PureComponent {
 
     constructor(props) {

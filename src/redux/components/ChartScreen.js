@@ -8,9 +8,6 @@ import {
 } from 'react-native';
 import {LineChart} from 'react-native-charts-wrapper';
 import {List, Button, Card, FormInput, ListItem} from 'react-native-elements'
-
-
-
 const list=[
     {
         id: 2,
@@ -77,8 +74,13 @@ const list=[
 
 
 ];
-
 const {width, height}=Dimensions.get('window')
+/**
+ *@fileName:ChartScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:46
+ *@disc:图表
+ **/
 class ChartScreen extends React.Component {
 
     static navigationOptions = ({navigation}) => {

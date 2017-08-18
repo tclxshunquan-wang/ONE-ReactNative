@@ -16,6 +16,12 @@ let urls=[
     {title:'【React Native开发】React Native API模块之AsyncStorage(持久化存储)使用详解(29)',url:'http://www.lcode.org/react-native-api模块之asyncstorage持久化存储使用详解29/'},
     {title:'AsyncStorage存储key管理小技巧',url:'http://blog.csdn.net/sinat_17775997/article/details/60468845'},
 ];
+/**
+ *@fileName:StorageScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:48
+ *@disc:缓存
+ **/
 class StorageScreen extends React.Component {
 
     static navigationOptions = ({navigation}) => {

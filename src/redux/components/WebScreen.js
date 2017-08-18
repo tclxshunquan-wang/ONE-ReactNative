@@ -6,6 +6,12 @@ import {
     ActivityIndicator
 } from 'react-native';
 const WEBVIEW_REF = 'webview';
+/**
+ *@fileName:WebScreen.js
+ *@author:shunq_wang
+ *@date:2017/8/18 下午5:48
+ *@disc:WebView
+ **/
 class WebScreen extends React.Component {
     static navigationOptions=({navigation})=>{
         return {
