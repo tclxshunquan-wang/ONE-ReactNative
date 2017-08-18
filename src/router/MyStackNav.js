@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
 import Color from '../res/color'
 import Tab from './MyTabNav'
-import MyHomeScreen from '../redux/components/MyHomeScreen'
 import WebScreen from '../redux/components/WebScreen'
 import HttpScreen from '../redux/components/HttpScreen'
 import ReduxScreen from '../redux/components/ReduxScreen'
@@ -28,6 +27,7 @@ import TimeSeriesLineChartScreen from '../res/charts/TimeSeriesLineChartScreen'
 import ZeroLineChartScreen from '../res/charts/ZeroLineChartScreen'
 import Shop_Info from '../redux/components/modules/Shop_Info'
 import Shop_Car from '../redux/components/modules/Shop_Car'
+import VideoScreen from '../redux/components/VideoScreen'
 
 const RootReducer = StackNavigator(
     {
@@ -56,7 +56,8 @@ const RootReducer = StackNavigator(
         TimeSeriesLineChartScreen:{screen:TimeSeriesLineChartScreen},
         ZeroLineChartScreen:{screen:ZeroLineChartScreen},
         Shop_Info:{screen:Shop_Info},
-        Shop_Car:{screen:Shop_Car}
+        Shop_Car:{screen:Shop_Car},
+        VideoScreen:{screen:VideoScreen}
     },
     {
         initialRouteName:'Tab',

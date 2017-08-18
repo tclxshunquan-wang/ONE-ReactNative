@@ -9,6 +9,7 @@ const initialState = {
         {id:3,name:'react native—数据缓存',dis:'AsyncStorage是一个简单的、异步的、持久化的Key-Value存储系统，它对于App来说是全局性的。'},
         {id:4,name:'react native—性能优化',dis:'使用React Native替代基于WebView的框架来开发App的一个强有力的理由，就是为了使App可以达到每秒60帧（足够流畅），并且能有类似原生App的外观和手感。因此我们也尽可能地优化React Native去实现这一目标，使开发者能集中精力处理App的业务逻辑，而不用费心考虑性能。但是，总还是有一些地方有所欠缺，以及在某些场合React Native还不能够替你决定如何进行优化（用原生代码写也无法避免），因此人工的干预依然是必要的。'},
         {id:8,name:'react native—图表使用',dis:'感谢(@wuxudong/react-native-charts-wrapper)'},
+        {id:10,name:'react native—视频播放',dis:'点击屏幕即可播放视频'},
         {id:5,name:'react native—Windows环境搭建',dis:'欢迎使用React Native！这篇文档会帮助你搭建基本的React Native开发环境。'},
         {id:6,name:'react native—Mac环境搭建',dis:'欢迎使用React Native！这篇文档会帮助你搭建基本的React Native开发环境。'},
         {id:7,name:'react native—打包发布流程',dis:'Android和ios'},

@@ -65,6 +65,8 @@ class MyHomeScreen extends React.Component {
                     break;
                 case 8://图表
                     navigation.navigate('ChartScreen', {title: item.name});
+                case 10://视频
+                    navigation.navigate('VideoScreen', {title: item.name});
                     break;
 
             }

@@ -142,6 +142,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-video')
     compile project(':react-native-charts-wrapper')
     compile project(':react-native-barcodescanner')
     compile project(':react-native-vector-icons')
