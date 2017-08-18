@@ -1,8 +1,8 @@
 import React from 'react';
 import {
     StyleSheet,
-    processColor,
-    View,
+    Platform,
+    ToastAndroid,
     ScrollView,
     Dimensions
 } from 'react-native';
@@ -150,7 +150,11 @@ class ChartScreen extends React.Component {
 
                 case 13:
                     navText = 'Live Updating';
-                    navigation.navigate('LiveUpdateChartScreen', {title: navText});
+                    if(Platform.OS==='ios'){
+                        navigation.navigate('LiveUpdateChartScreen', {title: navText});
+                    }else{
+                        ToastAndroid.SHORT("正在开发中...")
+                    }
                     break;
 
                 case 14:
