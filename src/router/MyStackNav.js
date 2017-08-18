@@ -1,4 +1,4 @@
-import {StackNavigator} from 'react-navigation';
+import {StackNavigator,NavigationActions} from 'react-navigation';
 import React, {Component} from 'react';
 import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
 import Color from '../res/color'
@@ -32,7 +32,7 @@ import Shop_Car from '../redux/components/modules/Shop_Car'
 const RootReducer = StackNavigator(
     {
         Tab: {screen: Tab},//tab路由
-        MyHomeScreen: {screen: MyHomeScreen},//具有路由功能的页面 其他单页面也可以在这里进行配置
+        // MyHomeScreen: {screen: MyHomeScreen},//具有路由功能的页面 其他单页面也可以在这里进行配置
         WebScreen: {screen: WebScreen},
         HttpScreen: {screen: HttpScreen},
         ReduxScreen:{screen:ReduxScreen},
@@ -40,7 +40,6 @@ const RootReducer = StackNavigator(
         StorageScreen:{screen:StorageScreen},
         PackageScreen:{screen:PackageScreen},
         ChartScreen:{screen:ChartScreen},
-
         AxisLineChartScreen:{screen:AxisLineChartScreen},
         BarChartScreen:{screen:BarChartScreen},
         BubbleChartScreen:{screen:BubbleChartScreen},
@@ -58,9 +57,9 @@ const RootReducer = StackNavigator(
         ZeroLineChartScreen:{screen:ZeroLineChartScreen},
         Shop_Info:{screen:Shop_Info},
         Shop_Car:{screen:Shop_Car}
-        // MyDrawerLayout:{screen:MyDrawerLayout}
     },
     {
+        initialRouteName:'Tab',
         navigationOptions: { //通用配置 参考 https://reactnavigation.org/docs/navigators 属性 全局属性
             headerBackTitle: null,
             headerTintColor: '#fff',
@@ -78,7 +77,29 @@ const RootReducer = StackNavigator(
             screenInterpolator: CardStackStyleInterpolator.forHorizontal//forVertical 页面切换动画方式
         })
     });
+
+/**
+ * 处理安卓返回键
+ */
+// let lastBackPressed=0;
+// const defaultStateAction = RootReducer.router.getStateForAction;
+// RootReducer.router.getStateForAction = (action,state) => {
+//     if(state && action.type === NavigationActions.BACK && state.routes.length === 1) {
+//             // ToastAndroid.show(Constant.hint_exit,ToastAndroid.SHORT);
+//
+//             lastBackPressed = Date.now();
+//             const routes = [...state.routes];
+//             return {
+//                 ...state,
+//                 ...state.routes,
+//                 index: routes.length - 1,
+//             };
+//     }
+//     return defaultStateAction(action,state);
+// };
+
 export default RootReducer;
+
 //侧边栏 三者嵌套关系：侧边栏->跳转->选项卡 （DrawerNavigator->StackNavigator->TabNavigator）
 // export default DrawerNavigator({
 //        nav: { screen: nav },

@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import {
     View,
-    StatusBar
+    StatusBar,
 } from 'react-native';
 import { connect,Provider } from 'react-redux';
 import store from './store/configure-store';
 import  RootReducer from '../router/MyStackNav'
-import { addNavigationHelpers } from 'react-navigation';
-@connect(state => ({
-    nav: state.navReducer
-}))
 
-class AppWithNavigationState extends Component {
+
+class App extends Component {
+
     render() {
         return (
             <View style={{flex:1}}>
@@ -19,17 +17,17 @@ class AppWithNavigationState extends Component {
                     backgroundColor="#1e88e5"
                     translucent={false}
                 />
-                <RootReducer
-                    navigation={addNavigationHelpers({
-                    dispatch: this.props.dispatch,
-                    state: this.props.nav
-                })}
-                />
+                <RootReducer />
             </View>
 
         );
     }
 }
+const mapStateToProps = (state) => ({
+    nav: state.navReducer
+});
+
+const AppWithNavigationState = connect(mapStateToProps)(App);
 
 export default class Root extends Component {
 

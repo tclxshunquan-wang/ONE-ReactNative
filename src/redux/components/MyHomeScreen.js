@@ -5,7 +5,9 @@ import {
     Animated,
     FlatList,
     Text,
-    TouchableOpacity
+    TouchableOpacity,
+    Platform,
+    BackHandler
 } from 'react-native';
 import {CheckBox, Button, Card, Icon} from 'react-native-elements'
 import {bindActionCreators} from 'redux';
@@ -24,64 +26,70 @@ class MyHomeScreen extends React.Component {
     constructor(props) {
         super(props);
         this.itemView = this.itemView.bind(this);
-        this.startPage=this.startPage.bind(this);
+        this.startPage = this.startPage.bind(this);
+
     }
 
-    startPage=(item)=>{
-        let navigation=this.props.navigation;
-        if(navigation){
-            switch (item.id){
+
+
+    startPage = (item) => {
+        let navigation = this.props.navigation;
+        if (navigation) {
+            switch (item.id) {
                 case 0://fetch/axios
-                    navigation.navigate('HttpScreen',{title:item.name});
+                    navigation.navigate('HttpScreen', {title: item.name});
                     break;
                 case 1://redux
-                    navigation.navigate('ReduxScreen',{title:item.name});
+                    navigation.navigate('ReduxScreen', {title: item.name});
                     break;
                 case 2://二维码扫描
-                    navigation.navigate('QCodeScreen',{title:item.name});
+                    navigation.navigate('QCodeScreen', {title: item.name});
                     break;
                 case 3://数据缓存
-                    navigation.navigate('StorageScreen',{title:item.name});
+                    navigation.navigate('StorageScreen', {title: item.name});
                     break;
                 case 7://打包发布
-                    navigation.navigate('PackageScreen',{title:item.name});
+                    navigation.navigate('PackageScreen', {title: item.name});
                     break;
                 case 4://性能优化
-                    navigation.navigate('WebScreen',{url:'http://www.jianshu.com/p/57f2e987c879',title:item.name});
+                    navigation.navigate('WebScreen', {url: 'http://www.jianshu.com/p/57f2e987c879', title: item.name});
                     break;
                 case 5://性能优化
-                    navigation.navigate('WebScreen',{url:'http://www.lcode.org/史上最详细windows版本搭建安装react-native环境配置/',title:item.name});
+                    navigation.navigate('WebScreen', {
+                        url: 'http://www.lcode.org/史上最详细windows版本搭建安装react-native环境配置/',
+                        title: item.name
+                    });
                     break;
                 case 6://性能优化
-                    navigation.navigate('WebScreen',{url:'http://www.jianshu.com/p/cb8bbb499841',title:item.name});
+                    navigation.navigate('WebScreen', {url: 'http://www.jianshu.com/p/cb8bbb499841', title: item.name});
                     break;
                 case 8://图表
-                    navigation.navigate('ChartScreen',{title:item.name});
+                    navigation.navigate('ChartScreen', {title: item.name});
                     break;
 
             }
         }
     };
 
-    componentDidMount(){
+    componentDidMount() {
     }
 
     itemView = ({item}) => {
         return <View style={styles.itemContainer}>
             <TouchableOpacity
-            onPress={()=>this.startPage(item)}
+                onPress={() => this.startPage(item)}
             >
-            <Card
-                containerStyle={styles.card}
-                title={item.name}
-                titleStyle={styles.title}
-            >
-                <Text style={styles.disTxt}>{item.dis}</Text>
-                <View style={{flexDirection:'row',justifyContent:'flex-end'}}>
-                    <Icon
-                        name='chevron-right'/>
-                </View>
-            </Card>
+                <Card
+                    containerStyle={styles.card}
+                    title={item.name}
+                    titleStyle={styles.title}
+                >
+                    <Text style={styles.disTxt}>{item.dis}</Text>
+                    <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
+                        <Icon
+                            name='chevron-right'/>
+                    </View>
+                </Card>
             </TouchableOpacity>
         </View>
     };
@@ -90,10 +98,10 @@ class MyHomeScreen extends React.Component {
     render() {
         return (
             <View
-                style={{flex:1}}
+                style={{flex: 1}}
             >
                 <AnimatedFlatList
-                    style={{flex:1}}
+                    style={{flex: 1}}
                     renderItem={this.itemView}
                     data={this.props.state.homeList}
                     ListFooterComponent={this._renderFooter}
@@ -112,7 +120,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     card: {
-        marginBottom:5
+        marginBottom: 5
     },
     title: {
         fontSize: 14,
@@ -122,9 +130,9 @@ const styles = StyleSheet.create({
         height: 0.5,
         backgroundColor: '#888586'
     },
-    disTxt:{
-        fontSize:12,
-        color:'#888586'
+    disTxt: {
+        fontSize: 12,
+        color: '#888586'
     }
 
 });
