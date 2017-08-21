@@ -83,8 +83,8 @@
 		536B35041F3D82CB00A43D25 /* BridgeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B34D71F3D82CB00A43D25 /* BridgeUtils.swift */; };
 		536B35051F3D82CB00A43D25 /* ChartDataSetConfigUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B34D81F3D82CB00A43D25 /* ChartDataSetConfigUtils.swift */; };
 		536B35061F3D82CB00A43D25 /* EntryToDictionaryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B34D91F3D82CB00A43D25 /* EntryToDictionaryUtils.swift */; };
-		53F315911F46DE8E004B2AA9 /* SwiftyJSON.framework in Embedded Binaries */ = {isa = PBXBuildFile; fileRef = 536B36671F3D888400A43D25 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		53F315921F46E01C004B2AA9 /* Charts.framework in Embedded Binaries */ = {isa = PBXBuildFile; fileRef = 536B36571F3D87E600A43D25 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53EBA6631F4AACEB0098A0C1 /* SwiftyJSON.framework in Embedded Binaries */ = {isa = PBXBuildFile; fileRef = 53EBA6561F4AACAD0098A0C1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53EBA6641F4AACF20098A0C1 /* Charts.framework in Embedded Binaries */ = {isa = PBXBuildFile; fileRef = 53EBA6471F4AACA40098A0C1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5443064BDCEC4B5DBB6031AB /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D28EF01C736D4EAF8ADB7834 /* Entypo.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		662C5939EC64413788EAF956 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1835ADDF0C81464DB9671DA1 /* Ionicons.ttf */; };
@@ -266,65 +266,65 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
-		536B36561F3D87E600A43D25 /* PBXContainerItemProxy */ = {
+		53EBA6461F4AACA40098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B36511F3D87E600A43D25 /* Charts.xcodeproj */;
+			containerPortal = 53EBA6411F4AACA40098A0C1 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06165F241D8110E600722320;
 			remoteInfo = Charts;
 		};
-		536B36581F3D87E600A43D25 /* PBXContainerItemProxy */ = {
+		53EBA6481F4AACA40098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B36511F3D87E600A43D25 /* Charts.xcodeproj */;
+			containerPortal = 53EBA6411F4AACA40098A0C1 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06165F2E1D8110E600722320;
 			remoteInfo = ChartsTests;
 		};
-		536B36661F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA6551F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
 			remoteInfo = "SwiftyJSON iOS";
 		};
-		536B36681F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA6571F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2E4FEFE619575BE100351305;
 			remoteInfo = "SwiftyJSON iOS Tests";
 		};
-		536B366A1F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA6591F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
 			remoteInfo = "SwiftyJSON OSX";
 		};
-		536B366C1F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA65B1F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
 			remoteInfo = "SwiftyJSON OSX Tests";
 		};
-		536B366E1F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA65D1F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
 			remoteInfo = "SwiftyJSON watchOS";
 		};
-		536B36701F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA65F1F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7236B4F61BAC14150020529B;
 			remoteInfo = "SwiftyJSON tvOS";
 		};
-		536B36721F3D888400A43D25 /* PBXContainerItemProxy */ = {
+		53EBA6611F4AACAD0098A0C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+			containerPortal = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
 			remoteInfo = "SwiftyJSON tvOS Tests";
@@ -380,8 +380,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				53F315921F46E01C004B2AA9 /* Charts.framework in Embedded Binaries */,
-				53F315911F46DE8E004B2AA9 /* SwiftyJSON.framework in Embedded Binaries */,
+				53EBA6641F4AACF20098A0C1 /* Charts.framework in Embedded Binaries */,
+				53EBA6631F4AACEB0098A0C1 /* SwiftyJSON.framework in Embedded Binaries */,
 			);
 			name = "Embedded Binaries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,9 +462,9 @@
 		536B34D71F3D82CB00A43D25 /* BridgeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeUtils.swift; sourceTree = "<group>"; };
 		536B34D81F3D82CB00A43D25 /* ChartDataSetConfigUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataSetConfigUtils.swift; sourceTree = "<group>"; };
 		536B34D91F3D82CB00A43D25 /* EntryToDictionaryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryToDictionaryUtils.swift; sourceTree = "<group>"; };
-		536B36511F3D87E600A43D25 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		536B36751F3D8AA600A43D25 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		53EBA6411F4AACA40098A0C1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5FD5EC78D87E4CB9958CA183 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		6E52FBFEE9BA4348AFEDB097 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -653,8 +653,8 @@
 		536B349F1F3D82CB00A43D25 /* ReactNativeCharts */ = {
 			isa = PBXGroup;
 			children = (
-				536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */,
-				536B36511F3D87E600A43D25 /* Charts.xcodeproj */,
+				53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */,
+				53EBA6411F4AACA40098A0C1 /* Charts.xcodeproj */,
 				536B34A01F3D82CB00A43D25 /* BalloonMarker.swift */,
 				536B34A11F3D82CB00A43D25 /* bar */,
 				536B34AA1F3D82CB00A43D25 /* bubble */,
@@ -788,25 +788,25 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		536B36521F3D87E600A43D25 /* Products */ = {
+		53EBA6421F4AACA40098A0C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				536B36571F3D87E600A43D25 /* Charts.framework */,
-				536B36591F3D87E600A43D25 /* ChartsTests.xctest */,
+				53EBA6471F4AACA40098A0C1 /* Charts.framework */,
+				53EBA6491F4AACA40098A0C1 /* ChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		536B365C1F3D888400A43D25 /* Products */ = {
+		53EBA64B1F4AACAD0098A0C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				536B36671F3D888400A43D25 /* SwiftyJSON.framework */,
-				536B36691F3D888400A43D25 /* SwiftyJSON iOS Tests.xctest */,
-				536B366B1F3D888400A43D25 /* SwiftyJSON.framework */,
-				536B366D1F3D888400A43D25 /* SwiftyJSON OSX Tests.xctest */,
-				536B366F1F3D888400A43D25 /* SwiftyJSON.framework */,
-				536B36711F3D888400A43D25 /* SwiftyJSON.framework */,
-				536B36731F3D888400A43D25 /* SwiftyJSON tvOS Tests.xctest */,
+				53EBA6561F4AACAD0098A0C1 /* SwiftyJSON.framework */,
+				53EBA6581F4AACAD0098A0C1 /* SwiftyJSON iOS Tests.xctest */,
+				53EBA65A1F4AACAD0098A0C1 /* SwiftyJSON.framework */,
+				53EBA65C1F4AACAD0098A0C1 /* SwiftyJSON OSX Tests.xctest */,
+				53EBA65E1F4AACAD0098A0C1 /* SwiftyJSON.framework */,
+				53EBA6601F4AACAD0098A0C1 /* SwiftyJSON.framework */,
+				53EBA6621F4AACAD0098A0C1 /* SwiftyJSON tvOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1026,8 +1026,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 536B36521F3D87E600A43D25 /* Products */;
-					ProjectRef = 536B36511F3D87E600A43D25 /* Charts.xcodeproj */;
+					ProductGroup = 53EBA6421F4AACA40098A0C1 /* Products */;
+					ProjectRef = 53EBA6411F4AACA40098A0C1 /* Charts.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -1082,8 +1082,8 @@
 					ProjectRef = DD386A8B36734E1E8FFFBA86 /* RNVectorIcons.xcodeproj */;
 				},
 				{
-					ProductGroup = 536B365C1F3D888400A43D25 /* Products */;
-					ProjectRef = 536B365B1F3D888400A43D25 /* SwiftyJSON.xcodeproj */;
+					ProductGroup = 53EBA64B1F4AACAD0098A0C1 /* Products */;
+					ProjectRef = 53EBA64A1F4AACAD0098A0C1 /* SwiftyJSON.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1251,67 +1251,67 @@
 			remoteRef = 536B34911F3D7F9E00A43D25 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B36571F3D87E600A43D25 /* Charts.framework */ = {
+		53EBA6471F4AACA40098A0C1 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 536B36561F3D87E600A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA6461F4AACA40098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B36591F3D87E600A43D25 /* ChartsTests.xctest */ = {
+		53EBA6491F4AACA40098A0C1 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 536B36581F3D87E600A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA6481F4AACA40098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B36671F3D888400A43D25 /* SwiftyJSON.framework */ = {
+		53EBA6561F4AACAD0098A0C1 /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
-			remoteRef = 536B36661F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA6551F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B36691F3D888400A43D25 /* SwiftyJSON iOS Tests.xctest */ = {
+		53EBA6581F4AACAD0098A0C1 /* SwiftyJSON iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftyJSON iOS Tests.xctest";
-			remoteRef = 536B36681F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA6571F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B366B1F3D888400A43D25 /* SwiftyJSON.framework */ = {
+		53EBA65A1F4AACAD0098A0C1 /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
-			remoteRef = 536B366A1F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA6591F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B366D1F3D888400A43D25 /* SwiftyJSON OSX Tests.xctest */ = {
+		53EBA65C1F4AACAD0098A0C1 /* SwiftyJSON OSX Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftyJSON OSX Tests.xctest";
-			remoteRef = 536B366C1F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA65B1F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B366F1F3D888400A43D25 /* SwiftyJSON.framework */ = {
+		53EBA65E1F4AACAD0098A0C1 /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
-			remoteRef = 536B366E1F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA65D1F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B36711F3D888400A43D25 /* SwiftyJSON.framework */ = {
+		53EBA6601F4AACAD0098A0C1 /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
-			remoteRef = 536B36701F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA65F1F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		536B36731F3D888400A43D25 /* SwiftyJSON tvOS Tests.xctest */ = {
+		53EBA6621F4AACAD0098A0C1 /* SwiftyJSON tvOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftyJSON tvOS Tests.xctest";
-			remoteRef = 536B36721F3D888400A43D25 /* PBXContainerItemProxy */;
+			remoteRef = 53EBA6611F4AACAD0098A0C1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		53F3154D1F46CB7E004B2AA9 /* libRCTVideo.a */ = {
@@ -1595,6 +1595,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -1631,6 +1632,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FXPEW4KCUR;
