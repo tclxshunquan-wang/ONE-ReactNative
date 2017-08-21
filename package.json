@@ -13,6 +13,7 @@
     "lodash": "^4.17.4",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.3",
+    "react-native-animatable": "^1.2.3",
     "react-native-barcodescanner": "^3.1.1",
     "react-native-charts-wrapper": "^0.2.10",
     "react-native-drawer": "^2.3.0",

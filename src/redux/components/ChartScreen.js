@@ -153,7 +153,7 @@ class ChartScreen extends React.Component {
                     if(Platform.OS==='ios'){
                         navigation.navigate('LiveUpdateChartScreen', {title: navText});
                     }else{
-                        ToastAndroid.SHORT("正在开发中...")
+                        ToastAndroid.show('正在开发中...', ToastAndroid.SHORT);
                     }
                     break;
 
@@ -197,17 +197,4 @@ class ChartScreen extends React.Component {
         }
 
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF'
-    },
-    card: {
-        marginBottom: 10
-    },
-    chart: {
-        height: 350,
-        width: width
-    }
-});
 export default ChartScreen

@@ -28,18 +28,18 @@ import ZeroLineChartScreen from '../res/charts/ZeroLineChartScreen'
 import Shop_Info from '../redux/components/modules/Shop_Info'
 import Shop_Car from '../redux/components/modules/Shop_Car'
 import VideoScreen from '../redux/components/VideoScreen'
+import AnimatableScreen from '../redux/components/AnimatableScreen'
 
 const RootReducer = StackNavigator(
     {
         Tab: {screen: Tab},//tab路由
-        // MyHomeScreen: {screen: MyHomeScreen},//具有路由功能的页面 其他单页面也可以在这里进行配置
-        WebScreen: {screen: WebScreen},
-        HttpScreen: {screen: HttpScreen},
-        ReduxScreen:{screen:ReduxScreen},
-        QCodeScreen:{screen:QCodeScreen},
-        StorageScreen:{screen:StorageScreen},
-        PackageScreen:{screen:PackageScreen},
-        ChartScreen:{screen:ChartScreen},
+        WebScreen: {screen: WebScreen},//webview
+        HttpScreen: {screen: HttpScreen},//网络请求
+        ReduxScreen:{screen:ReduxScreen},//redux
+        QCodeScreen:{screen:QCodeScreen},//二维码
+        StorageScreen:{screen:StorageScreen},//持久化存储
+        PackageScreen:{screen:PackageScreen},//打包
+        ChartScreen:{screen:ChartScreen},//图表
         AxisLineChartScreen:{screen:AxisLineChartScreen},
         BarChartScreen:{screen:BarChartScreen},
         BubbleChartScreen:{screen:BubbleChartScreen},
@@ -55,9 +55,10 @@ const RootReducer = StackNavigator(
         StackedBarChartScreen:{screen:StackedBarChartScreen},
         TimeSeriesLineChartScreen:{screen:TimeSeriesLineChartScreen},
         ZeroLineChartScreen:{screen:ZeroLineChartScreen},
-        Shop_Info:{screen:Shop_Info},
-        Shop_Car:{screen:Shop_Car},
-        VideoScreen:{screen:VideoScreen}
+        Shop_Info:{screen:Shop_Info},//商品详情
+        Shop_Car:{screen:Shop_Car},//购物车
+        VideoScreen:{screen:VideoScreen},//视频
+        AnimatableScreen:{screen:AnimatableScreen}//动画
     },
     {
         initialRouteName:'Tab',
