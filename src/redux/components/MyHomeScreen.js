@@ -83,6 +83,9 @@ class MyHomeScreen extends React.Component {
                     break;
                 case 11://动画
                     navigation.navigate('AnimatableScreen', {title: item.name});
+                    break;
+                case 12://通讯录选择器
+                    navigation.navigate('PickerScreen', {title: item.name});
                 break;
 
             }

@@ -29,6 +29,7 @@ import Shop_Info from '../redux/components/modules/Shop_Info'
 import Shop_Car from '../redux/components/modules/Shop_Car'
 import VideoScreen from '../redux/components/VideoScreen'
 import AnimatableScreen from '../redux/components/AnimatableScreen'
+import PickerScreen from '../redux/components/PickerScreen'
 
 const RootReducer = StackNavigator(
     {
@@ -58,7 +59,8 @@ const RootReducer = StackNavigator(
         Shop_Info:{screen:Shop_Info},//商品详情
         Shop_Car:{screen:Shop_Car},//购物车
         VideoScreen:{screen:VideoScreen},//视频
-        AnimatableScreen:{screen:AnimatableScreen}//动画
+        AnimatableScreen:{screen:AnimatableScreen},//动画
+        PickerScreen:{screen:PickerScreen}//通讯录选择器
     },
     {
         initialRouteName:'Tab',
