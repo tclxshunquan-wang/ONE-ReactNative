@@ -29,7 +29,7 @@ class HttpScreen extends React.Component {
         this.state = {
             url: '',
             resA: [],
-            resB: ""
+            resB: []
         }
     }
 
@@ -43,7 +43,7 @@ class HttpScreen extends React.Component {
         if (type == 'axios') {
             this.setState({
                 resA: [],
-                resB:""
+                resB:[]
             });
             send({method: 'GET', url: 'toutiao/index?type=type'}, (res) => {
                 this.setState({
@@ -53,11 +53,11 @@ class HttpScreen extends React.Component {
         } else {
             this.setState({//数据重置
                 resA: [],
-                resB: ""
+                resB:[]
             });
             fetch_({method: 'GET', url: 'http://toutiao-ali.juheapi.com/toutiao/index?type=type'}, (res) => {
                 this.setState({
-                    resB: JSON.stringify(res)
+                    resB: res.result.data
                 })
             });
         }
@@ -105,7 +105,19 @@ class HttpScreen extends React.Component {
                         titleStyle={styles.title}
                     >
 
-                        <Text>{this.state.resB}</Text>
+                        <List>
+                            {
+                                this.state.resB.map((l, i) => (
+                                    <ListItem
+                                        onPress={()=>{this.props.navigation.navigate('WebScreen',{url:l.url,title:l.title});}}
+                                        roundAvatar
+                                        avatar={{uri:l.thumbnail_pic_s}}
+                                        key={i}
+                                        title={l.title}
+                                    />
+                                ))
+                            }
+                        </List>
                         <Button
                             iconRight
                             title='发送请求'

@@ -25,7 +25,7 @@ async function get(url,callback){
             method: 'GET',
             headers:head,
 
-        });
+        }).then((re)=>re.json());
         return  callback(response);
     }catch (e){
         console.log(e)
@@ -38,7 +38,7 @@ async function post(url,params,callback){
             method: 'POST',
             headers: headers,
             body: JSON.stringify(params)
-        });
+        }).then((re)=>re.json());
         return  callback(response);
 
     }catch (e){

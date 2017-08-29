@@ -32,7 +32,7 @@ class SimplePickerView extends React.PureComponent {
                 <AnimatedFlatList
                     style={{backgroundColor:ActiveColor}}
                     data={Data}
-                    extraData={this.state}
+                    extraData={this.state.P}
                     renderItem={(item) => (
                         <TouchableHighlight
                             underlayColor="#e6e6e6"
@@ -43,7 +43,10 @@ class SimplePickerView extends React.PureComponent {
                                 })
                             }}
                         >
-                            <View style={{alignItems: 'center', height: 20, backgroundColor:item.index==this.state.P?InactiveColor:ActiveColor,width:this.props.style.width?this.props.style.width:25}}>
+                            <View style={{alignItems: 'center', height: 20,
+                                backgroundColor:item.index==this.state.P?InactiveColor:ActiveColor,width:this.props.style.width?this.props.style.width:25,
+                            justifyContent:'center'
+                            }}>
                                 <Text style={{color:item.index==this.state.P?InactiveTextColor?InactiveTextColor:"#FFFFFF":ActiveTextColor?ActiveTextColor:"#000000"}}>{item.item}</Text>
                             </View>
                         </TouchableHighlight>
