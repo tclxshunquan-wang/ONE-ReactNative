@@ -6,7 +6,7 @@ const initialState = {
         {id:0,name:'react native—网络请求',dis:'很多移动应用都需要从远程地址中获取数据或资源。你可能需要给某个REST API发起POST请求以提交用户数据，又或者可能仅仅需要从某个服务器上获取一些静态内容——以下就是你会用到的东西'},
         {id:1,name:'react native—Redux使用',dis:'Redux is a predictable state container for JavaScript apps.(这个很重要！！！)'},
         {id:8,name:'react native—图表使用',dis:'感谢(@wuxudong/react-native-charts-wrapper)'},
-        {id:12,name:'react native—通讯录选择器',dis:'感谢(@wuxudong/react-native-charts-wrapper)'},
+        {id:12,name:'react native—通讯录选择器',dis:'基于Flatlist的首字母索引列表，其实没想象的那么难'},
         {id:10,name:'react native—视频播放',dis:'点击屏幕即可播放视频'},
         {id:11,name:'react native—酷炫动画',dis:'有人建议让我写点动画的例子出来，这里面的应该足够你用了吧'},
         {id:3,name:'react native—数据缓存',dis:'AsyncStorage是一个简单的、异步的、持久化的Key-Value存储系统，它对于App来说是全局性的。'},
