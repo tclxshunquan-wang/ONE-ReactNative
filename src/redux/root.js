@@ -25,13 +25,14 @@ class App extends Component {
     onBackPressed = () => {
         const routes = this.props.routes || [];
         if (routes.index > 0) {
-            this.props.nav.popBack();
+            this.props.actions.popBack();
             return true
         }
         return false
     };
 
     render() {
+
 
         return (
             <View style={{flex: 1}}>
@@ -42,7 +43,7 @@ class App extends Component {
                 <RootNav
                     navigation={
                         addNavigationHelpers({
-                            nav: this.props.nav,
+                            actions: this.props.actions,
                             dispatch: this.props.dispatch,
                             state: this.props.routes,
                         })
@@ -60,7 +61,7 @@ const AppWithNavigationState = connect(
     }),
     (dispatch) => ({
         dispatch,
-        nav: bindActionCreators(RoutesAction,dispatch),
+        actions: bindActionCreators(RoutesAction,dispatch),
     })
 )(App);
 

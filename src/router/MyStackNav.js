@@ -81,25 +81,5 @@ const RootReducer = StackNavigator(
             screenInterpolator: CardStackStyleInterpolator.forHorizontal//forVertical 页面切换动画方式
         })
     });
-
-/**
- * 处理安卓返回键
- */
-// const defaultStateAction = RootReducer.router.getStateForAction;
-// RootReducer.router.getStateForAction = (action,state) => {
-//     console.log(state)
-//     if(state && action.type === NavigationActions.BACK && state.routes.length === 1) {
-//
-//
-//             const routes = [...state.routes];
-//             return {
-//                 ...state,
-//                 ...state.routes,
-//                 index: routes.length - 1,
-//             };
-//     }
-//     return defaultStateAction(action,state);
-// };
-
 export default RootReducer;
 

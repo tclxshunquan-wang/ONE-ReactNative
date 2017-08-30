@@ -37,7 +37,7 @@ class MyHomeScreen extends React.Component {
     }
 
     startPage = (item) => {
-        let nav = this.props.navigation.nav;
+        let nav = this.props.navigation.actions;
         if (nav) {
             switch (item.id) {
                 case 0://fetch/axios
