@@ -85,13 +85,12 @@ const RootReducer = StackNavigator(
 /**
  * 处理安卓返回键
  */
-// let lastBackPressed=0;
 // const defaultStateAction = RootReducer.router.getStateForAction;
 // RootReducer.router.getStateForAction = (action,state) => {
+//     console.log(state)
 //     if(state && action.type === NavigationActions.BACK && state.routes.length === 1) {
-//             // ToastAndroid.show(Constant.hint_exit,ToastAndroid.SHORT);
 //
-//             lastBackPressed = Date.now();
+//
 //             const routes = [...state.routes];
 //             return {
 //                 ...state,

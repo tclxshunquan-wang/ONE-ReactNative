@@ -36,17 +36,15 @@ class MyHomeScreen extends React.Component {
 
     }
 
-
-
     startPage = (item) => {
-        let navigation = this.props.navigation;
-        if (navigation) {
+        let nav = this.props.navigation.nav;
+        if (nav) {
             switch (item.id) {
                 case 0://fetch/axios
-                    navigation.navigate('HttpScreen', {title: item.name});
+                    nav.pushTo('HttpScreen', {title: item.name});
                     break;
                 case 1://redux
-                    navigation.navigate('ReduxScreen', {title: item.name});
+                    nav.pushTo('ReduxScreen', {title: item.name});
                     break;
                 case 2://二维码扫描
                     if(Platform.OS==='ios'){
@@ -54,38 +52,38 @@ class MyHomeScreen extends React.Component {
                             '正在开发...',
                         )
                     }else{
-                        navigation.navigate('QCodeScreen', {title: item.name});
+                        nav.pushTo('QCodeScreen', {title: item.name});
                     }
                     break;
                 case 3://数据缓存
-                    navigation.navigate('StorageScreen', {title: item.name});
+                    nav.pushTo('StorageScreen', {title: item.name});
                     break;
                 case 7://打包发布
-                    navigation.navigate('PackageScreen', {title: item.name});
+                    nav.pushTo('PackageScreen', {title: item.name});
                     break;
                 case 4://性能优化
-                    navigation.navigate('WebScreen', {url: 'http://www.jianshu.com/p/57f2e987c879', title: item.name});
+                    nav.pushTo('WebScreen', {url: 'http://www.jianshu.com/p/57f2e987c879', title: item.name});
                     break;
                 case 5://性能优化
-                    navigation.navigate('WebScreen', {
+                    nav.pushTo('WebScreen', {
                         url: 'http://www.lcode.org/史上最详细windows版本搭建安装react-native环境配置/',
                         title: item.name
                     });
                     break;
                 case 6://性能优化
-                    navigation.navigate('WebScreen', {url: 'http://www.jianshu.com/p/cb8bbb499841', title: item.name});
+                    nav.pushTo('WebScreen', {url: 'http://www.jianshu.com/p/cb8bbb499841', title: item.name});
                     break;
                 case 8://图表
-                    navigation.navigate('ChartScreen', {title: item.name});
+                    nav.pushTo('ChartScreen', {title: item.name});
                     break;
                 case 10://视频
-                    navigation.navigate('VideoScreen', {title: item.name});
+                    nav.pushTo('VideoScreen', {title: item.name});
                     break;
                 case 11://动画
-                    navigation.navigate('AnimatableScreen', {title: item.name});
+                    nav.pushTo('AnimatableScreen', {title: item.name});
                     break;
                 case 12://通讯录选择器
-                    navigation.navigate('PickerScreen', {title: item.name});
+                    nav.pushTo('PickerScreen', {title: item.name});
                 break;
 
             }
