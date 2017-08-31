@@ -135,7 +135,7 @@ class Shop_Info extends React.Component {
                         <View style={{height:300}}>
                             <ViewPager
                                 style={{flex:1}}
-                                isLoop={false}
+                                isLoop={true}
                                 autoPlay={false}
                                 dataSource={this.state.dataSource}
                                 renderPage={this._renderPage}
