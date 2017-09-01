@@ -7,14 +7,19 @@ import {
     Text,
     TouchableOpacity,
     Platform,
-    AlertIOS
+    AlertIOS,
+    Linking
 } from 'react-native';
 import {Card, Icon} from 'react-native-elements'
+import MyAxios from '../../http/AxiosRequest'
+import  Api from '../../res/api'
+import PopupDialog, {ScaleAnimation, DialogTitle, DialogButton} from 'react-native-popup-dialog';
 import {bindActionCreators} from 'redux';
 import * as homeAction from '../actions/HomeAction';
 import * as commentAction from '../actions/CommentAction';
 import {connect} from 'react-redux';
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
+const scaleAnimation = new ScaleAnimation();
 const VIEWABILITY_CONFIG = {
     minimumViewTime: 1000,
     viewAreaCoveragePercentThreshold: 100,
@@ -33,7 +38,23 @@ class MyHomeScreen extends React.Component {
         super(props);
         this.itemView = this.itemView.bind(this);
         this.startPage = this.startPage.bind(this);
+        this.state = {
+            dis: {}
+        }
 
+    }
+
+    componentWillMount() {
+
+        let ax = new MyAxios({timeout: 3000});
+        //检测最新版本
+        ax.send({method: 'GET', url: Api.checkUpdateUrl}, (res) => {
+            if(res.version>2){
+                this.setState({dis: res}, () => {
+                    this.scaleAnimationDialog.show()
+                })
+            }
+        });
     }
 
     startPage = (item) => {
@@ -47,11 +68,11 @@ class MyHomeScreen extends React.Component {
                     nav.pushTo('ReduxScreen', {title: item.name});
                     break;
                 case 2://二维码扫描
-                    if(Platform.OS==='ios'){
+                    if (Platform.OS === 'ios') {
                         AlertIOS.alert(
                             '正在开发...',
                         )
-                    }else{
+                    } else {
                         nav.pushTo('QCodeScreen', {title: item.name});
                     }
                     break;
@@ -84,7 +105,7 @@ class MyHomeScreen extends React.Component {
                     break;
                 case 12://通讯录选择器
                     nav.pushTo('PickerScreen', {title: item.name});
-                break;
+                    break;
 
             }
         }
@@ -117,7 +138,7 @@ class MyHomeScreen extends React.Component {
     render() {
         return (
             <View
-                style={{flex: 1}}
+                style={{flex: 1,justifyContent:'center'}}
             >
                 <AnimatedFlatList
                     style={{flex: 1}}
@@ -128,6 +149,27 @@ class MyHomeScreen extends React.Component {
                     viewabilityConfig={VIEWABILITY_CONFIG}
                     keyExtractor={this._keyExtractor}
                 />
+                <PopupDialog
+                    ref={(popupDialog) => {
+                     this.scaleAnimationDialog = popupDialog;
+                                          }}
+                    actions={[
+                    <DialogButton
+                      text="果断更新"
+                      onPress={() => {
+                        Linking.openURL(this.state.dis.update_url).catch(err => console.error('An error occurred', err));
+                        this.scaleAnimationDialog.dismiss();
+                      }}
+                      key="button-1"
+                    />,
+                   ]}
+                    dialogAnimation={scaleAnimation}
+                    dialogTitle={<DialogTitle title="更新提示" />}
+                >
+                    <View style={styles.dialogContentView}>
+                        <Text>{this.state.dis.changelog}</Text>
+                    </View>
+                </PopupDialog>
             </View>
 
         );
@@ -152,6 +194,9 @@ const styles = StyleSheet.create({
     disTxt: {
         fontSize: 12,
         color: '#888586'
+    },
+    dialogContentView: {
+        flex: 1
     }
 
 });

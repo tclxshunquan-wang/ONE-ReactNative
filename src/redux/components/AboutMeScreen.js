@@ -7,6 +7,7 @@ import {
     ScrollView,
     TouchableOpacity
 } from 'react-native';
+import  _package from '../../../package.json'
 import {CheckBox, Button, Card, Divider} from 'react-native-elements'
 const URL = [
     {
@@ -75,9 +76,9 @@ class AboutMeScreen extends React.Component {
 
     render() {
         return (
-            <ScrollView>
+            <ScrollView style={{flex:1}}>
 
-                <View style={{alignItems: 'center', paddingTop: 15, paddingBottom: 15}}>
+                <View style={{alignItems: 'center', paddingTop: 15, paddingBottom: 15,flex:1}}>
                     <Image style={{width: 50, height: 50, borderRadius: 25}}
                            source={require("../../../images/icon-head.jpeg")}/>
                     <Text style={{marginTop: 10, fontSize: 16}}>Quan</Text>
@@ -101,6 +102,10 @@ class AboutMeScreen extends React.Component {
                             title: URL[2].title
                         }))}
                     </View>
+                    <View style={{top:50}}>
+                        <Text style={{fontSize:12,color:"#888586"}}>v {_package.version}</Text>
+                    </View>
+
                 </View>
             </ScrollView>
         );

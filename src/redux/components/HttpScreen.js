@@ -6,7 +6,7 @@ import {
     ScrollView
 } from 'react-native';
 import {ListItem, Button, Card, List} from 'react-native-elements'
-import {send} from '../../http/AxiosRequest'
+import MyAxios from '../../http/AxiosRequest'
 import  {fetch_} from '../../http/FetchRequest'
 /**
  *@fileName:HttpScreen.js
@@ -21,7 +21,6 @@ class HttpScreen extends React.Component {
         }
 
     };
-
 
     constructor(props) {
         super(props);
@@ -45,7 +44,8 @@ class HttpScreen extends React.Component {
                 resA: [],
                 resB:[]
             });
-            send({method: 'GET', url: 'toutiao/index?type=type'}, (res) => {
+            let _axios=new MyAxios(undefined);
+            _axios.send({method: 'GET', url: 'toutiao/index?type=type'}, (res) => {
                 this.setState({
                     resA: res.result.data
                 })
