@@ -10,15 +10,15 @@ export default function homeReducer(state = initialState, action = {}) {
     switch (action.type){
 
         case types.ADD:
+            state.sum++;
             return{
                 ...state,
-                sum:initialState.sum++
             };
             break;
         case types.DEL:
+            state.sum--;
             return{
                 ...state,
-                sum:initialState.sum--
             };
             break;
         default:
