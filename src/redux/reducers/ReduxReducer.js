@@ -10,6 +10,7 @@ export default function homeReducer(state = initialState, action = {}) {
     switch (action.type){
 
         case types.ADD:
+            const {payload={}}=action;
             state.sum++;
             return{
                 ...state,

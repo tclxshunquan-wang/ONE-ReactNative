@@ -84,7 +84,7 @@ class StorageScreen extends React.Component {
         }
     }
 
-    saveDataToCache(name, value) {
+    saveDataToCache=(name, value) =>{
         if (typeof (value) === 'string') {
             saveData.data = value;
         } else if (typeof (value) === 'object') {
