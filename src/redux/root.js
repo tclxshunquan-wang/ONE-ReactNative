@@ -71,7 +71,7 @@ export default class Root extends Component {
     render() {
         return (
             <Provider store={store}>
-                <AppWithNavigationState/>
+                    <AppWithNavigationState/>
             </Provider>
         )
     }
