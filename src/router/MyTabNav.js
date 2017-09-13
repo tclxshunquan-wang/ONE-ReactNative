@@ -3,46 +3,45 @@ import {
   Image,
   StyleSheet
 } from 'react-native';
-import { StackNavigator,TabNavigator } from 'react-navigation';
+import {TabNavigator } from 'react-navigation';
 import MyHomeScreen from '../redux/components/MyHomeScreen'
 import ShopScreen from '../redux/components/ShopScreen'
 import AboutMeScreen from '../redux/components/AboutMeScreen'
-
-// 注册tabs
-export default  TabNavigator({
-    Home: {
-        screen: MyHomeScreen,
-        navigationOptions:{
+import _ from 'lodash'
+const map={ Home: {
+    screen: MyHomeScreen,
+    navigationOptions:{
         tabBarLabel: '首页',
         title: '首页',
         headerTintColor:'#000',
+        tabBarVisible:true,
         headerTitleStyle: {
-          alignSelf:'center',
+            alignSelf:'center',
         },
         tabBarIcon:({tintColor}) => (
-                    <Image
-                        source={require('../../images/home_up.png')}
-                        style={[{tintColor: tintColor},styles.icon]}
-                    />
-                ),
-        }
-    },
+            <Image
+                source={require('../../images/home_up.png')}
+                style={[{tintColor: tintColor},styles.icon]}
+            />
+        ),
+    }
+},
     Shop: {
         screen: ShopScreen,
         navigationOptions: {
-        tabBarLabel: '商城',
-        tabBarVisible:true,
-        title: '商城',
-        headerTintColor:'#000',
-        headerTitleStyle: {
-          alignSelf:'center',
-        },
-        tabBarIcon:({tintColor}) => (
-                      <Image
-                          source={require('../../images/shop_up.png')}
-                          style={[{tintColor: tintColor},styles.icon]}
-                      />
-                  ),
+            tabBarLabel: '商城',
+            tabBarVisible:true,
+            title: '商城',
+            headerTintColor:'#000',
+            headerTitleStyle: {
+                alignSelf:'center',
+            },
+            tabBarIcon:({tintColor}) => (
+                <Image
+                    source={require('../../images/shop_up.png')}
+                    style={[{tintColor: tintColor},styles.icon]}
+                />
+            ),
         }
     },
     Me: {
@@ -62,8 +61,9 @@ export default  TabNavigator({
                 />
             ),
         }
-    }
-  }, {
+    }}
+// 注册tabs
+ const  tabNavigator=TabNavigator(_.assign({},map), {
       animationEnabled: false, // 切换页面时是否有动画效果
       tabBarPosition: 'bottom', // 显示在底端，android 默认是显示在页面顶端的
       swipeEnabled: false, // 是否可以左右滑动切换tab
@@ -89,7 +89,6 @@ export default  TabNavigator({
           },
       }
 });
-
 const styles = StyleSheet.create({//每一个tab样式 可单独指定
     icon: {
         height: 25,
@@ -98,3 +97,6 @@ const styles = StyleSheet.create({//每一个tab样式 可单独指定
         top:0
     }
 });
+
+
+export default tabNavigator

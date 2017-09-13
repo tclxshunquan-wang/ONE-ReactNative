@@ -81,5 +81,7 @@ const RootReducer = StackNavigator(
             screenInterpolator: CardStackStyleInterpolator.forHorizontal//forVertical 页面切换动画方式
         })
     });
+
+
 export default RootReducer;
 
