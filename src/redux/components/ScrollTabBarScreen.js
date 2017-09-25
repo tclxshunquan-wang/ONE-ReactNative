@@ -40,17 +40,25 @@ class ScrollTabBarScreen extends React.Component {
         return (
             <View style={{flex:1}}>
                 <TabBars
+                    style={{flex:1,backgroundColor:"#FFF"}}
+                    containerStyle={{borderRadius:25,borderColor:"#00000000",backgroundColor:"#bdbdbd",}}
+                    InactiveTextColor="#FFF"
+                    ActiveTextColor="#D6356C"
+                    TextStyle={{fontWeight:"bold",textAlign:"center",alignSelf:"center",marginTop:8}}
                     Routes={[
                                 { key: '1', title: 'First' },
                                 { key: '2', title: 'Second'},
                             ]}
                     Index={1}
-                    IsLineIndicator={false}
+                    isLineIndicator={false}
+                    scrollEnabled={false}
                 >
                     <View/>
                     <View/>
                 </TabBars>
                 <TabBars
+                    style={{flex:1,backgroundColor:"#FFF"}}
+                    containerStyle={{backgroundColor:"#bdbdbd",}}
                     Routes={[
                                 { key: '1', title: 'First' },
                                 { key: '2', title: 'Second'},
@@ -60,8 +68,8 @@ class ScrollTabBarScreen extends React.Component {
                                 { key: '6', title: 'Second'},
                             ]}
                     Index={1}
-                    IsLineIndicator={false}
-                    ScrollEnabled={true}
+                    isLineIndicator={false}
+                    scrollEnabled={true}
                 >
                     <View/>
                     <View/>
@@ -71,16 +79,21 @@ class ScrollTabBarScreen extends React.Component {
                     <View/>
                 </TabBars>
                 <TabBars
+                    style={{flex:1,backgroundColor:"#FFF"}}
+                    containerStyle={{backgroundColor:"#bdbdbd",}}
                     Routes={[
                                 { key: '1', title: 'First' },
                                 { key: '2', title: 'Second'},
                             ]}
                     Index={0}
+                    isLineIndicator={true}
                 >
                     <View/>
                     <View/>
                 </TabBars>
                 <TabBars
+                    style={{flex:1,backgroundColor:"#FFF"}}
+                    containerStyle={{backgroundColor:"#bdbdbd",}}
                     Routes={[
                                 { key: '1', title: 'First' },
                                 { key: '2', title: 'Second'},
@@ -90,8 +103,8 @@ class ScrollTabBarScreen extends React.Component {
                                 { key: '6', title: 'Second'},
                             ]}
                     Index={1}
-                    IsLineIndicator={true}
-                    ScrollEnabled={true}
+                    isLineIndicator={true}
+                    scrollEnabled={true}
                 >
                     <View/>
                     <View/>
