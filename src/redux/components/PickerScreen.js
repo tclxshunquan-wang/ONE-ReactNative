@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  Text,
-  View,
-  StyleSheet,
+    Text,
+    View,
+    StyleSheet,
     ScrollView
 } from 'react-native';
 import SimplePicker from './modules/SimplePicker';
@@ -28,10 +28,10 @@ class PickerScreen extends React.Component {
 
     }
     render() {
-    return (
-        <SimplePicker/>
-    );
-  }
+        return (
+            <SimplePicker/>
+        );
+    }
 }
 
 const styles = StyleSheet.create({

@@ -102,6 +102,9 @@ class MyHomeScreen extends React.Component {
                 case 12://通讯录选择器
                     nav.pushTo('PickerScreen', {title: item.name});
                     break;
+                case 13://TAb
+                    nav.pushTo('ScrollTabBarScreen', {title: item.name});
+                    break;
 
             }
         }
