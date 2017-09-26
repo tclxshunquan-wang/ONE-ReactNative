@@ -3,10 +3,10 @@ import {
     Text,
     View,
     StyleSheet,
-    ScrollView
 } from 'react-native';
 import {List, Button, Card, ListItem} from 'react-native-elements'
 import TabBars from "./modules/TabBars"
+import TabViewPage from "./modules/TabViewPage"
 
 /**
  *@fileName:ReduxScreen.js
@@ -14,6 +14,7 @@ import TabBars from "./modules/TabBars"
  *@date:2017/8/18 下午5:47
  *@disc:Redux教程
  **/
+const list=[{name:"页面一"},{name:"页面二"},{name:"页面三"},{name:"页面四"}];
 class ScrollTabBarScreen extends React.Component {
 
     static navigationOptions = ({navigation}) => {
@@ -36,9 +37,19 @@ class ScrollTabBarScreen extends React.Component {
 
     }
 
+    _renderPage=(res,id)=>{
+        return <View style={{flex:1,alignItems:"center",justifyContent:"center"}}><Text>{`name:${res.name}  RowID${id}`}</Text></View>
+    };
+
     render() {
         return (
-            <View style={{flex:1}}>
+            <View style={{flex:1,backgroundColor:"#FFF"}}>
+                    <TabViewPage
+                        Index={0}
+                        dataSource={list}
+                        style={{flex:1}}
+                        renderPage={this._renderPage}
+                    />
                 <TabBars
                     style={{flex:1,backgroundColor:"#FFF"}}
                     containerStyle={{borderRadius:25,borderColor:"#00000000",backgroundColor:"#bdbdbd",}}
@@ -84,19 +95,6 @@ class ScrollTabBarScreen extends React.Component {
                     Routes={[
                                 { key: '1', title: 'First' },
                                 { key: '2', title: 'Second'},
-                            ]}
-                    Index={0}
-                    isLineIndicator={true}
-                >
-                    <View/>
-                    <View/>
-                </TabBars>
-                <TabBars
-                    style={{flex:1,backgroundColor:"#FFF"}}
-                    containerStyle={{backgroundColor:"#bdbdbd",}}
-                    Routes={[
-                                { key: '1', title: 'First' },
-                                { key: '2', title: 'Second'},
                                 { key: '3', title: 'First' },
                                 { key: '4', title: 'Second'},
                                 { key: '5', title: 'First' },
@@ -113,6 +111,7 @@ class ScrollTabBarScreen extends React.Component {
                     <View/>
                     <View/>
                 </TabBars>
+
             </View>
         );
     }
