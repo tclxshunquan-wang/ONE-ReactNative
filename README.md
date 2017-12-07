@@ -21,6 +21,7 @@
 V0.0.1:初始化项目
 V0.0.2:首页新增视频播放模块
 V0.0.3:路由优化,深层次理解React Navigation,首页新增通讯录列表
+V0.0.4:集成CodePush热更新
 ```
 
 ## Development Workflow
