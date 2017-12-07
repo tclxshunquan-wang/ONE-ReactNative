@@ -8,7 +8,7 @@ import {
     Dimensions,
     StyleSheet,
     Platform
-} from 'react-native';
+} from "react-native";
 import DefaultViewPageIndicator from "./DefaultViewPageIndicator";
 import StaticRenderer from 'react-native/Libraries/Components/StaticRenderer';
 import {TabViewAnimated, TabViewPagerPan} from 'react-native-tab-view';

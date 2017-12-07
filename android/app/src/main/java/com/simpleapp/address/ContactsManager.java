@@ -1,12 +1,18 @@
 package com.simpleapp.address;
 
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -29,7 +35,8 @@ public class ContactsManager extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getAll(Promise promise) {
-        ArrayList arrayList = new ArrayList<Phone>();
+        ArrayList arrayList = new ArrayList<>();
+        arrayList.clear();
         try {
             String result = new GetContactsInfo(getReactApplicationContext()).getContactInfo();
             ArrayList<Info> list = new Gson().fromJson(result, new TypeToken<ArrayList<Info>>() {
@@ -44,13 +51,13 @@ public class ContactsManager extends ReactContextBaseJavaModule {
                     }
                 });
 
-                for (int j = 0; j < words.length; j++) {
+                for (String word : words) {
                     Phone phone = new Phone();
-                    phone.setPinYin(words[j]);
+                    phone.setPinYin(word);
                     ArrayList<Info> lis = new ArrayList<>();
                     for (int i = 0; i < list.size(); i++) {
                         String first = pinyinTool.toPinYin(list.get(i).getName()).substring(0, 1);
-                        if (first.equals(words[j])) {
+                        if (first.equals(word)) {
                             lis.add(list.get(i));
                         }
                     }
@@ -77,24 +84,24 @@ public class ContactsManager extends ReactContextBaseJavaModule {
         private String PinYin;
         private ArrayList<Info> data;
 
-        public String getPinYin() {
+        private String getPinYin() {
             return PinYin;
         }
 
-        public void setPinYin(String pinYin) {
+        private void setPinYin(String pinYin) {
             PinYin = pinYin;
         }
 
-        public ArrayList<Info> getInfo() {
+        private ArrayList<Info> getInfo() {
             return data;
         }
 
-        public void setInfo(ArrayList<Info> info) {
+        private void setInfo(ArrayList<Info> info) {
             this.data = info;
         }
     }
 
-    class Info {
+    class Info implements Comparable<Info> {
         private String name;
         private String phone;
         private String PinYin;
@@ -123,6 +130,13 @@ public class ContactsManager extends ReactContextBaseJavaModule {
         public void setFirst(String first) {
             this.PinYin = first;
         }
+
+
+        @Override
+        public int compareTo(@NonNull Info another) {
+            return 0;
+        }
     }
+
 
 }

@@ -66,6 +66,7 @@ apply plugin: 'kotlin-android'
  */
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -102,8 +103,8 @@ android {
         applicationId "com.simpleapp"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 2
-        versionName "0.0.2"
+        versionCode 3
+        versionName "0.0.3"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -142,6 +143,10 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-code-push')
+    compile project(':appcenter-crashes')
+    compile project(':appcenter-analytics')
+    compile project(':appcenter')
     compile project(':react-native-video')
     compile project(':react-native-charts-wrapper')
     compile project(':react-native-barcodescanner')

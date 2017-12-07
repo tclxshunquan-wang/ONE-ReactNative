@@ -8,6 +8,9 @@
     "bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.ios.js  --platform ios --dev false --bundle-output ./bundle/index.ios.jsbundle --assets-dest ./bundle"
   },
   "dependencies": {
+    "appcenter": "^1.0.1",
+    "appcenter-analytics": "^1.0.1",
+    "appcenter-crashes": "^1.0.1",
     "axios": "^0.16.2",
     "immutability-helper": "^2.3.1",
     "lodash": "^4.17.4",
@@ -16,6 +19,7 @@
     "react-native-animatable": "^1.2.3",
     "react-native-barcodescanner": "^3.1.1",
     "react-native-charts-wrapper": "^0.2.10",
+    "react-native-code-push": "^2.0.3-beta",
     "react-native-drawer": "^2.3.0",
     "react-native-elements": "^0.15.0",
     "react-native-scrollable-tab-view": "^0.6.7",

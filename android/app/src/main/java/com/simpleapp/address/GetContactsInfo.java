@@ -15,7 +15,9 @@ import android.provider.ContactsContract.CommonDataKinds.StructuredName;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.Groups;
 import android.text.TextUtils;
+import android.util.ArrayMap;
 import android.util.Log;
+import android.util.SparseArray;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,6 +32,8 @@ public class GetContactsInfo {
     private Context context;
     private JSONArray contactData;
     private JSONObject jsonObject;
+
+    HashMap hashMap=new HashMap<Integer,String>();
 
     public GetContactsInfo(Context context) {
         this.context = context;

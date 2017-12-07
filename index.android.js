@@ -4,12 +4,14 @@
  */
 import React from 'react';
 import {
-    AppRegistry
+  AppRegistry
 } from 'react-native';
- import Root from './src/redux/root'
- class SimpleApp extends React.Component {
-   render() {
-   return (<Root/>);
- }
- }
-AppRegistry.registerComponent('SimpleApp', () => SimpleApp);
+import Root from './src/redux/root'
+import CodePush from 'react-native-code-push'
+
+const app = CodePush({
+  installMode: CodePush.InstallMode.IMMEDIATE,
+  updateDialog: true
+})(Root)
+
+AppRegistry.registerComponent('SimpleApp',  ()=>app);

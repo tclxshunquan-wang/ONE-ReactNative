@@ -12,6 +12,8 @@ import {
 import store from './store/configure-store';
 import  RootNav from '../router/MyStackNav'
 import  * as RoutesAction from '../redux/actions/RoutesAction'
+
+
 class App extends Component {
 
     componentDidMount() {
@@ -66,7 +68,7 @@ const AppWithNavigationState = connect(
 )(App);
 
 
-export default class Root extends Component {
+class Root extends Component {
 
     render() {
         return (
@@ -76,3 +78,5 @@ export default class Root extends Component {
         )
     }
 }
+
+export default Root
